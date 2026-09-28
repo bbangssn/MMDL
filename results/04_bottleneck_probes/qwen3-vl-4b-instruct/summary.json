@@ -1,0 +1,207 @@
+{
+  "sample_count": 24,
+  "conditions": {
+    "direct": {
+      "total": 24,
+      "correct": 7,
+      "accuracy": 0.2916666666666667,
+      "fallbacks": 2,
+      "delta_vs_direct": 0.0,
+      "canonical_agreement_with_direct": 1.0,
+      "runtime": {
+        "total_elapsed_seconds": 10.056,
+        "mean_elapsed_seconds": 0.419,
+        "timed_samples": 24,
+        "untimed_legacy_samples": 0
+      }
+    },
+    "brief_cot": {
+      "total": 24,
+      "correct": 9,
+      "accuracy": 0.375,
+      "fallbacks": 4,
+      "delta_vs_direct": 0.08333333333333331,
+      "canonical_agreement_with_direct": 0.4166666666666667,
+      "runtime": {
+        "total_elapsed_seconds": 2.328,
+        "mean_elapsed_seconds": 0.097,
+        "timed_samples": 24,
+        "untimed_legacy_samples": 0
+      }
+    },
+    "structured_reasoning": {
+      "total": 24,
+      "correct": 8,
+      "accuracy": 0.3333333333333333,
+      "fallbacks": 2,
+      "delta_vs_direct": 0.04166666666666663,
+      "canonical_agreement_with_direct": 0.6666666666666666,
+      "runtime": {
+        "total_elapsed_seconds": 7.608,
+        "mean_elapsed_seconds": 0.317,
+        "timed_samples": 24,
+        "untimed_legacy_samples": 0
+      }
+    },
+    "grounded_answer": {
+      "total": 24,
+      "correct": 7,
+      "accuracy": 0.2916666666666667,
+      "fallbacks": 4,
+      "delta_vs_direct": 0.0,
+      "canonical_agreement_with_direct": 0.625,
+      "runtime": {
+        "total_elapsed_seconds": 2.808,
+        "mean_elapsed_seconds": 0.117,
+        "timed_samples": 24,
+        "untimed_legacy_samples": 0
+      }
+    },
+    "low_resolution": {
+      "total": 24,
+      "correct": 7,
+      "accuracy": 0.2916666666666667,
+      "fallbacks": 4,
+      "delta_vs_direct": 0.0,
+      "canonical_agreement_with_direct": 0.625,
+      "runtime": {
+        "total_elapsed_seconds": 6.6,
+        "mean_elapsed_seconds": 0.275,
+        "timed_samples": 24,
+        "untimed_legacy_samples": 0
+      }
+    },
+    "high_resolution": {
+      "total": 24,
+      "correct": 9,
+      "accuracy": 0.375,
+      "fallbacks": 3,
+      "delta_vs_direct": 0.08333333333333331,
+      "canonical_agreement_with_direct": 0.625,
+      "runtime": {
+        "total_elapsed_seconds": 8.544,
+        "mean_elapsed_seconds": 0.356,
+        "timed_samples": 24,
+        "untimed_legacy_samples": 0
+      }
+    },
+    "option_permuted": {
+      "total": 24,
+      "correct": 8,
+      "accuracy": 0.3333333333333333,
+      "fallbacks": 4,
+      "delta_vs_direct": 0.04166666666666663,
+      "canonical_agreement_with_direct": 0.4166666666666667,
+      "runtime": {
+        "total_elapsed_seconds": 7.56,
+        "mean_elapsed_seconds": 0.315,
+        "timed_samples": 24,
+        "untimed_legacy_samples": 0
+      }
+    },
+    "shuffled_with_conflict_instruction": {
+      "total": 24,
+      "correct": 4,
+      "accuracy": 0.16666666666666666,
+      "fallbacks": 3,
+      "delta_vs_direct": -0.12500000000000003,
+      "canonical_agreement_with_direct": 0.25,
+      "runtime": {
+        "total_elapsed_seconds": 8.28,
+        "mean_elapsed_seconds": 0.345,
+        "timed_samples": 24,
+        "untimed_legacy_samples": 0
+      }
+    },
+    "describe_then_solve": {
+      "total": 24,
+      "correct": 5,
+      "accuracy": 0.20833333333333334,
+      "fallbacks": 5,
+      "delta_vs_direct": -0.08333333333333334,
+      "canonical_agreement_with_direct": 0.5833333333333334,
+      "runtime": {
+        "total_elapsed_seconds": 8.04,
+        "mean_elapsed_seconds": 0.335,
+        "timed_samples": 24,
+        "untimed_legacy_samples": 0
+      }
+    },
+    "knowledge_notes_then_solve": {
+      "total": 24,
+      "correct": 8,
+      "accuracy": 0.3333333333333333,
+      "fallbacks": 3,
+      "delta_vs_direct": 0.04166666666666663,
+      "canonical_agreement_with_direct": 0.5416666666666666,
+      "runtime": {
+        "total_elapsed_seconds": 9.288,
+        "mean_elapsed_seconds": 0.387,
+        "timed_samples": 24,
+        "untimed_legacy_samples": 0
+      }
+    },
+    "oracle_rationale": {
+      "total": 24,
+      "correct": 11,
+      "accuracy": 0.4583333333333333,
+      "fallbacks": 5,
+      "delta_vs_direct": 0.16666666666666663,
+      "canonical_agreement_with_direct": 0.4166666666666667,
+      "runtime": {
+        "total_elapsed_seconds": 2.928,
+        "mean_elapsed_seconds": 0.122,
+        "timed_samples": 24,
+        "untimed_legacy_samples": 0
+      }
+    },
+    "sample_seed_0": {
+      "total": 24,
+      "correct": 7,
+      "accuracy": 0.2916666666666667,
+      "fallbacks": 5,
+      "delta_vs_direct": 0.0,
+      "canonical_agreement_with_direct": 0.5416666666666666,
+      "runtime": {
+        "total_elapsed_seconds": 4.224,
+        "mean_elapsed_seconds": 0.176,
+        "timed_samples": 24,
+        "untimed_legacy_samples": 0
+      }
+    },
+    "sample_seed_1": {
+      "total": 24,
+      "correct": 6,
+      "accuracy": 0.25,
+      "fallbacks": 4,
+      "delta_vs_direct": -0.041666666666666685,
+      "canonical_agreement_with_direct": 0.5,
+      "runtime": {
+        "total_elapsed_seconds": 4.176,
+        "mean_elapsed_seconds": 0.174,
+        "timed_samples": 24,
+        "untimed_legacy_samples": 0
+      }
+    },
+    "sample_seed_2": {
+      "total": 24,
+      "correct": 7,
+      "accuracy": 0.2916666666666667,
+      "fallbacks": 5,
+      "delta_vs_direct": 0.0,
+      "canonical_agreement_with_direct": 0.5416666666666666,
+      "runtime": {
+        "total_elapsed_seconds": 4.08,
+        "mean_elapsed_seconds": 0.17,
+        "timed_samples": 24,
+        "untimed_legacy_samples": 0
+      }
+    }
+  },
+  "three_seed_prediction_stability": 0.4583333333333333,
+  "benchmark": "MMMU-Pro small bottleneck probes",
+  "model": "qwen3-vl-4b-instruct",
+  "status": "completed",
+  "generated_this_session": 48,
+  "session_elapsed_seconds": 88.709
+}

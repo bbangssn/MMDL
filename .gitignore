@@ -1,0 +1,47 @@
+# 규모가 큰 파일들. 코드에 의해 생성되거나 다운될 있도록 제공.
+models
+datasets
+checkpoints/
+.cache/
+**/*.safetensors
+**/*.ckpt
+**/*.pt
+**/*.pth
+**/pytorch_model*.bin
+**/adapter_model*.bin
+
+# 실험 결과 파일들. 코드에 의해 생성되도록 제공
+results/**/predictions.jsonl
+results/**/judge_predictions.jsonl
+results/**/progress.json
+
+# 로거 (사람마다 로거 취향이 달라서...)
+wandb/
+runs/
+*.log
+*.out
+slurm-*.out
+
+# Python/build/test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Jupyter and editors
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# Secrets and OS files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db

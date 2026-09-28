@@ -1,0 +1,19 @@
+{
+  "benchmark": "MMMU validation vLLM LLM-as-a-Judge",
+  "dataset": "MMMU/MMMU",
+  "split": "validation",
+  "source_model": "qwen3-vl-4b-instruct",
+  "source_backend": "vllm",
+  "source_run_tag": "official-penalty-1p5",
+  "source_predictions": "00_mmmu_vllm/official-penalty-1p5/qwen3-vl-4b-instruct/predictions.jsonl",
+  "judge_model": "llama-3.1-8b-instruct",
+  "judge_model_path": "meta-llama/Llama-3.1-8B-Instruct",
+  "judge_backend": "transformers",
+  "judge_scope": "rule-parser fallbacks only",
+  "prompt_version": "qwen3-vl-official-build_prompt",
+  "official_prompt": true,
+  "official_default_judge": "gpt-3.5-turbo-0125",
+  "do_sample": false,
+  "max_new_tokens": 4096,
+  "max_model_length": 9048
+}

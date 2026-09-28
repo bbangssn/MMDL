@@ -1,0 +1,26 @@
+{
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "os": {
+    "system": "Linux",
+    "release": "6.8.0-138-generic"
+  },
+  "python": "3.14.7",
+  "cpu": "x86_64",
+  "cpu_count": 32,
+  "ram_gib": 187.85,
+  "gpu": {
+    "name": "NVIDIA RTX PRO 5000 Blackwell",
+    "memory_gib": 47.27
+  },
+  "cuda_visible_devices": "0",
+  "cuda": "13.0",
+  "packages": {
+    "torch": "2.13.0",
+    "transformers": "5.16.1",
+    "datasets": "5.0.1",
+    "accelerate": "1.14.0",
+    "qwen-vl-utils": "0.0.14",
+    "vllm": "0.30.0",
+    "tqdm": "4.70.0"
+  }
+}

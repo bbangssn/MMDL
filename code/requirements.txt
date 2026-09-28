@@ -1,0 +1,12 @@
+torch
+transformers
+accelerate
+datasets
+qwen-vl-utils
+pillow
+tqdm
+numpy
+pandas
+matplotlib
+jupyter
+vllm>=0.11.0

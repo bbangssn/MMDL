@@ -1,0 +1,21 @@
+{
+  "measurement": "longest stored local-judge output sample rerun",
+  "sample_id": "validation_Psychology_26",
+  "subject": "Psychology",
+  "judge_model": "meta-llama/Llama-3.1-8B-Instruct",
+  "physical_gpu": "0",
+  "gpu_name": "NVIDIA RTX PRO 5000 Blackwell",
+  "total_vram_gib": 47.267,
+  "baseline_allocated_gib": 14.958,
+  "baseline_reserved_gib": 14.961,
+  "peak_allocated_gib": 15.835,
+  "peak_reserved_gib": 16.041,
+  "elapsed_seconds": 72.394,
+  "prompt_chars": 9394,
+  "response_chars": 19937,
+  "input_tokens_before_chat_template": 2590,
+  "output_tokens": 4096,
+  "max_new_tokens": 4096,
+  "max_model_length": 9048,
+  "note": "Peak statistics were reset after model loading; the loaded model's current allocation remains included. Qwen and the judge run in separate processes, so their peaks must not be added."
+}

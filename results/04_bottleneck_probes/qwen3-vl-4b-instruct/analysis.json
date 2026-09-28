@@ -1,0 +1,465 @@
+{
+  "model": "qwen3-vl-4b-instruct",
+  "sample_count": 24,
+  "bootstrap_repetitions": 20000,
+  "conditions": {
+    "direct": {
+      "n": 24,
+      "correct": 7,
+      "accuracy": 0.2916666666666667,
+      "fallbacks": 2,
+      "nonfallback_n": 22,
+      "accuracy_excluding_fallback": 0.3181818181818182,
+      "mean_elapsed_seconds": 0.419
+    },
+    "brief_cot": {
+      "n": 24,
+      "correct": 9,
+      "accuracy": 0.375,
+      "fallbacks": 4,
+      "nonfallback_n": 20,
+      "accuracy_excluding_fallback": 0.4,
+      "mean_elapsed_seconds": 0.09700000000000002
+    },
+    "structured_reasoning": {
+      "n": 24,
+      "correct": 8,
+      "accuracy": 0.3333333333333333,
+      "fallbacks": 2,
+      "nonfallback_n": 22,
+      "accuracy_excluding_fallback": 0.3181818181818182,
+      "mean_elapsed_seconds": 0.317
+    },
+    "grounded_answer": {
+      "n": 24,
+      "correct": 7,
+      "accuracy": 0.2916666666666667,
+      "fallbacks": 4,
+      "nonfallback_n": 20,
+      "accuracy_excluding_fallback": 0.35,
+      "mean_elapsed_seconds": 0.117
+    },
+    "low_resolution": {
+      "n": 24,
+      "correct": 7,
+      "accuracy": 0.2916666666666667,
+      "fallbacks": 4,
+      "nonfallback_n": 20,
+      "accuracy_excluding_fallback": 0.35,
+      "mean_elapsed_seconds": 0.275
+    },
+    "high_resolution": {
+      "n": 24,
+      "correct": 9,
+      "accuracy": 0.375,
+      "fallbacks": 3,
+      "nonfallback_n": 21,
+      "accuracy_excluding_fallback": 0.38095238095238093,
+      "mean_elapsed_seconds": 0.35600000000000004
+    },
+    "option_permuted": {
+      "n": 24,
+      "correct": 8,
+      "accuracy": 0.3333333333333333,
+      "fallbacks": 4,
+      "nonfallback_n": 20,
+      "accuracy_excluding_fallback": 0.4,
+      "mean_elapsed_seconds": 0.315
+    },
+    "shuffled_with_conflict_instruction": {
+      "n": 24,
+      "correct": 4,
+      "accuracy": 0.16666666666666666,
+      "fallbacks": 3,
+      "nonfallback_n": 21,
+      "accuracy_excluding_fallback": 0.14285714285714285,
+      "mean_elapsed_seconds": 0.345
+    },
+    "oracle_rationale": {
+      "n": 24,
+      "correct": 11,
+      "accuracy": 0.4583333333333333,
+      "fallbacks": 5,
+      "nonfallback_n": 19,
+      "accuracy_excluding_fallback": 0.5263157894736842,
+      "mean_elapsed_seconds": 0.122
+    },
+    "sample_seed_0": {
+      "n": 24,
+      "correct": 7,
+      "accuracy": 0.2916666666666667,
+      "fallbacks": 5,
+      "nonfallback_n": 19,
+      "accuracy_excluding_fallback": 0.3684210526315789,
+      "mean_elapsed_seconds": 0.17600000000000002
+    },
+    "sample_seed_1": {
+      "n": 24,
+      "correct": 6,
+      "accuracy": 0.25,
+      "fallbacks": 4,
+      "nonfallback_n": 20,
+      "accuracy_excluding_fallback": 0.3,
+      "mean_elapsed_seconds": 0.17400000000000002
+    },
+    "sample_seed_2": {
+      "n": 24,
+      "correct": 7,
+      "accuracy": 0.2916666666666667,
+      "fallbacks": 5,
+      "nonfallback_n": 19,
+      "accuracy_excluding_fallback": 0.3157894736842105,
+      "mean_elapsed_seconds": 0.17
+    },
+    "describe_then_solve": {
+      "n": 24,
+      "correct": 5,
+      "accuracy": 0.20833333333333334,
+      "fallbacks": 5,
+      "nonfallback_n": 19,
+      "accuracy_excluding_fallback": 0.2631578947368421,
+      "mean_elapsed_seconds": 0.335
+    },
+    "knowledge_notes_then_solve": {
+      "n": 24,
+      "correct": 8,
+      "accuracy": 0.3333333333333333,
+      "fallbacks": 3,
+      "nonfallback_n": 21,
+      "accuracy_excluding_fallback": 0.38095238095238093,
+      "mean_elapsed_seconds": 0.387
+    },
+    "shuffled_no_instruction": {
+      "n": 24,
+      "correct": 4,
+      "accuracy": 0.16666666666666666,
+      "fallbacks": 5,
+      "nonfallback_n": 19,
+      "accuracy_excluding_fallback": 0.15789473684210525,
+      "mean_elapsed_seconds": 0.3459999999999999
+    }
+  },
+  "paired_vs_direct": {
+    "brief_cot": {
+      "n": 24,
+      "delta_accuracy": 0.08333333333333333,
+      "paired_bootstrap_95_ci": [
+        -0.08333333333333333,
+        0.25
+      ],
+      "direct_wrong_to_condition_correct": 3,
+      "direct_correct_to_condition_wrong": 1,
+      "both_nonfallback_n": 19,
+      "both_nonfallback_delta_accuracy": 0.05263157894736842
+    },
+    "structured_reasoning": {
+      "n": 24,
+      "delta_accuracy": 0.041666666666666664,
+      "paired_bootstrap_95_ci": [
+        -0.08333333333333333,
+        0.16666666666666666
+      ],
+      "direct_wrong_to_condition_correct": 2,
+      "direct_correct_to_condition_wrong": 1,
+      "both_nonfallback_n": 21,
+      "both_nonfallback_delta_accuracy": 0.0
+    },
+    "grounded_answer": {
+      "n": 24,
+      "delta_accuracy": 0.0,
+      "paired_bootstrap_95_ci": [
+        -0.125,
+        0.125
+      ],
+      "direct_wrong_to_condition_correct": 1,
+      "direct_correct_to_condition_wrong": 1,
+      "both_nonfallback_n": 19,
+      "both_nonfallback_delta_accuracy": 0.0
+    },
+    "low_resolution": {
+      "n": 24,
+      "delta_accuracy": 0.0,
+      "paired_bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "direct_wrong_to_condition_correct": 0,
+      "direct_correct_to_condition_wrong": 0,
+      "both_nonfallback_n": 20,
+      "both_nonfallback_delta_accuracy": 0.0
+    },
+    "high_resolution": {
+      "n": 24,
+      "delta_accuracy": 0.08333333333333333,
+      "paired_bootstrap_95_ci": [
+        0.0,
+        0.20833333333333334
+      ],
+      "direct_wrong_to_condition_correct": 2,
+      "direct_correct_to_condition_wrong": 0,
+      "both_nonfallback_n": 21,
+      "both_nonfallback_delta_accuracy": 0.047619047619047616
+    },
+    "option_permuted": {
+      "n": 24,
+      "delta_accuracy": 0.041666666666666664,
+      "paired_bootstrap_95_ci": [
+        -0.08333333333333333,
+        0.16666666666666666
+      ],
+      "direct_wrong_to_condition_correct": 2,
+      "direct_correct_to_condition_wrong": 1,
+      "both_nonfallback_n": 20,
+      "both_nonfallback_delta_accuracy": 0.05
+    },
+    "shuffled_with_conflict_instruction": {
+      "n": 24,
+      "delta_accuracy": -0.125,
+      "paired_bootstrap_95_ci": [
+        -0.375,
+        0.125
+      ],
+      "direct_wrong_to_condition_correct": 3,
+      "direct_correct_to_condition_wrong": 6,
+      "both_nonfallback_n": 21,
+      "both_nonfallback_delta_accuracy": -0.14285714285714285
+    },
+    "oracle_rationale": {
+      "n": 24,
+      "delta_accuracy": 0.16666666666666666,
+      "paired_bootstrap_95_ci": [
+        0.0,
+        0.375
+      ],
+      "direct_wrong_to_condition_correct": 5,
+      "direct_correct_to_condition_wrong": 1,
+      "both_nonfallback_n": 19,
+      "both_nonfallback_delta_accuracy": 0.21052631578947367
+    },
+    "sample_seed_0": {
+      "n": 24,
+      "delta_accuracy": 0.0,
+      "paired_bootstrap_95_ci": [
+        -0.125,
+        0.125
+      ],
+      "direct_wrong_to_condition_correct": 1,
+      "direct_correct_to_condition_wrong": 1,
+      "both_nonfallback_n": 19,
+      "both_nonfallback_delta_accuracy": 0.0
+    },
+    "sample_seed_1": {
+      "n": 24,
+      "delta_accuracy": -0.041666666666666664,
+      "paired_bootstrap_95_ci": [
+        -0.125,
+        0.0
+      ],
+      "direct_wrong_to_condition_correct": 0,
+      "direct_correct_to_condition_wrong": 1,
+      "both_nonfallback_n": 20,
+      "both_nonfallback_delta_accuracy": -0.05
+    },
+    "sample_seed_2": {
+      "n": 24,
+      "delta_accuracy": 0.0,
+      "paired_bootstrap_95_ci": [
+        -0.125,
+        0.125
+      ],
+      "direct_wrong_to_condition_correct": 1,
+      "direct_correct_to_condition_wrong": 1,
+      "both_nonfallback_n": 19,
+      "both_nonfallback_delta_accuracy": -0.05263157894736842
+    },
+    "describe_then_solve": {
+      "n": 24,
+      "delta_accuracy": -0.08333333333333333,
+      "paired_bootstrap_95_ci": [
+        -0.20833333333333334,
+        0.0
+      ],
+      "direct_wrong_to_condition_correct": 0,
+      "direct_correct_to_condition_wrong": 2,
+      "both_nonfallback_n": 19,
+      "both_nonfallback_delta_accuracy": -0.10526315789473684
+    },
+    "knowledge_notes_then_solve": {
+      "n": 24,
+      "delta_accuracy": 0.041666666666666664,
+      "paired_bootstrap_95_ci": [
+        -0.08333333333333333,
+        0.16666666666666666
+      ],
+      "direct_wrong_to_condition_correct": 2,
+      "direct_correct_to_condition_wrong": 1,
+      "both_nonfallback_n": 20,
+      "both_nonfallback_delta_accuracy": 0.05
+    },
+    "shuffled_no_instruction": {
+      "n": 24,
+      "delta_accuracy": -0.125,
+      "paired_bootstrap_95_ci": [
+        -0.375,
+        0.125
+      ],
+      "direct_wrong_to_condition_correct": 3,
+      "direct_correct_to_condition_wrong": 6,
+      "both_nonfallback_n": 19,
+      "both_nonfallback_delta_accuracy": -0.10526315789473684
+    }
+  },
+  "option_order": {
+    "both_nonfallback_n": 20,
+    "content_consistent_with_direct": 10,
+    "raw_letter_sticky": 5
+  },
+  "sampling": {
+    "all_three_predictions_same": 0.4583333333333333,
+    "items_with_seed_variation": 13,
+    "majority_vote_accuracy": 0.25,
+    "per_seed_accuracy": [
+      0.2916666666666667,
+      0.25,
+      0.2916666666666667
+    ]
+  },
+  "intermediate_answer_leakage": {
+    "describe_then_solve": {
+      "n": 24,
+      "explicit_answer_like_intermediates": 0
+    },
+    "knowledge_notes_then_solve": {
+      "n": 24,
+      "explicit_answer_like_intermediates": 20
+    }
+  },
+  "accuracy_by_category": {
+    "direct": {
+      "Art and Design": 1.0,
+      "Business": 0.25,
+      "Health and Medicine": 0.25,
+      "Humanities and Social Science": 0.0,
+      "Science": 0.0,
+      "Tech and Engineering": 0.25
+    },
+    "brief_cot": {
+      "Art and Design": 1.0,
+      "Business": 0.5,
+      "Health and Medicine": 0.25,
+      "Humanities and Social Science": 0.0,
+      "Science": 0.0,
+      "Tech and Engineering": 0.5
+    },
+    "structured_reasoning": {
+      "Art and Design": 1.0,
+      "Business": 0.25,
+      "Health and Medicine": 0.25,
+      "Humanities and Social Science": 0.0,
+      "Science": 0.25,
+      "Tech and Engineering": 0.25
+    },
+    "grounded_answer": {
+      "Art and Design": 1.0,
+      "Business": 0.5,
+      "Health and Medicine": 0.0,
+      "Humanities and Social Science": 0.0,
+      "Science": 0.0,
+      "Tech and Engineering": 0.25
+    },
+    "low_resolution": {
+      "Art and Design": 1.0,
+      "Business": 0.25,
+      "Health and Medicine": 0.25,
+      "Humanities and Social Science": 0.0,
+      "Science": 0.0,
+      "Tech and Engineering": 0.25
+    },
+    "high_resolution": {
+      "Art and Design": 1.0,
+      "Business": 0.25,
+      "Health and Medicine": 0.5,
+      "Humanities and Social Science": 0.0,
+      "Science": 0.25,
+      "Tech and Engineering": 0.25
+    },
+    "option_permuted": {
+      "Art and Design": 1.0,
+      "Business": 0.5,
+      "Health and Medicine": 0.0,
+      "Humanities and Social Science": 0.25,
+      "Science": 0.0,
+      "Tech and Engineering": 0.25
+    },
+    "shuffled_with_conflict_instruction": {
+      "Art and Design": 0.0,
+      "Business": 0.0,
+      "Health and Medicine": 0.5,
+      "Humanities and Social Science": 0.0,
+      "Science": 0.25,
+      "Tech and Engineering": 0.25
+    },
+    "oracle_rationale": {
+      "Art and Design": 1.0,
+      "Business": 0.5,
+      "Health and Medicine": 0.25,
+      "Humanities and Social Science": 0.25,
+      "Science": 0.0,
+      "Tech and Engineering": 0.75
+    },
+    "sample_seed_0": {
+      "Art and Design": 1.0,
+      "Business": 0.5,
+      "Health and Medicine": 0.0,
+      "Humanities and Social Science": 0.0,
+      "Science": 0.0,
+      "Tech and Engineering": 0.25
+    },
+    "sample_seed_1": {
+      "Art and Design": 1.0,
+      "Business": 0.25,
+      "Health and Medicine": 0.0,
+      "Humanities and Social Science": 0.0,
+      "Science": 0.0,
+      "Tech and Engineering": 0.25
+    },
+    "sample_seed_2": {
+      "Art and Design": 1.0,
+      "Business": 0.5,
+      "Health and Medicine": 0.0,
+      "Humanities and Social Science": 0.0,
+      "Science": 0.0,
+      "Tech and Engineering": 0.25
+    },
+    "describe_then_solve": {
+      "Art and Design": 0.5,
+      "Business": 0.25,
+      "Health and Medicine": 0.25,
+      "Humanities and Social Science": 0.0,
+      "Science": 0.0,
+      "Tech and Engineering": 0.25
+    },
+    "knowledge_notes_then_solve": {
+      "Art and Design": 1.0,
+      "Business": 0.25,
+      "Health and Medicine": 0.25,
+      "Humanities and Social Science": 0.0,
+      "Science": 0.0,
+      "Tech and Engineering": 0.5
+    },
+    "shuffled_no_instruction": {
+      "Art and Design": 0.0,
+      "Business": 0.25,
+      "Health and Medicine": 0.5,
+      "Humanities and Social Science": 0.0,
+      "Science": 0.25,
+      "Tech and Engineering": 0.0
+    }
+  },
+  "interpretation_guardrails": [
+    "This is a directional 24-item probe, not a benchmark score.",
+    "Items were selected for one image and an official explanation.",
+    "Fallback-excluded accuracy is reported because random fallback can obscure prompting effects.",
+    "Oracle rationale can reveal answer semantics and is only an upper-bound diagnostic."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "benchmark": "MMMU-Pro standard10 modality ablation",
+  "dataset": "MMMU/MMMU_Pro",
+  "dataset_config": "standard (10 options)",
+  "split": "test",
+  "model": "qwen3-vl-4b-instruct",
+  "model_path": "Qwen/Qwen3-VL-4B-Instruct",
+  "sample_count": 200,
+  "conditions": [
+    "full",
+    "text_only",
+    "shuffled_image",
+    "blank_image"
+  ],
+  "run_conditions": [
+    "text_only",
+    "shuffled_image",
+    "blank_image"
+  ],
+  "full_source": "01_mmmu_pro/standard10/<model>/predictions.jsonl",
+  "backend": "vllm",
+  "batch_size": 32,
+  "max_images_per_prompt": 40,
+  "multi_image_resize_threshold": 7,
+  "multi_image_max_pixels": 125440,
+  "gpu_memory_utilization": 0.8,
+  "presence_penalty": 1.5,
+  "max_new_tokens": 2048,
+  "max_model_length": 9048,
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "seed": 42,
+  "min_pixels": 1003520,
+  "max_pixels": 4014080,
+  "visible_gpu": "0"
+}

@@ -1,0 +1,22 @@
+{
+  "physical_gpu": "0",
+  "source": "nvidia-smi whole-device polling",
+  "poll_interval_seconds": 0.5,
+  "baseline_used_mib": 4,
+  "peak_used_mib": 40358,
+  "peak_increase_mib": 40354,
+  "total_mib": 48935,
+  "peak_used_gib": 39.412,
+  "peak_increase_gib": 39.408,
+  "utilization_at_peak_percent": 82.47,
+  "samples": 1680,
+  "poll_errors": 0,
+  "scope_note": "Whole physical GPU usage, including vLLM worker processes and any other process on that GPU. Baseline is recorded before model loading.",
+  "benchmark": "MMMU validation",
+  "backend": "vllm",
+  "model": "qwen3-vl-4b-instruct",
+  "run_tag": "official-penalty-1p5",
+  "gpu_memory_utilization_setting": 0.8,
+  "vllm_use_flashinfer_sampler": false,
+  "measured_at": "2026-09-28T16:08:01"
+}

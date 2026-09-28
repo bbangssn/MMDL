@@ -1,0 +1,149 @@
+{
+  "selection": "4 explanation-bearing one-image items per category",
+  "samples": [
+    {
+      "id": "validation_Art_Theory_30",
+      "category": "Art and Design",
+      "subject": "Art_Theory",
+      "donor_id": "test_Design_25"
+    },
+    {
+      "id": "validation_Art_Theory_6",
+      "category": "Art and Design",
+      "subject": "Art_Theory",
+      "donor_id": "test_Biology_328"
+    },
+    {
+      "id": "validation_Art_13",
+      "category": "Art and Design",
+      "subject": "Art",
+      "donor_id": "test_Biology_19"
+    },
+    {
+      "id": "validation_Art_Theory_10",
+      "category": "Art and Design",
+      "subject": "Art_Theory",
+      "donor_id": "test_History_37"
+    },
+    {
+      "id": "validation_Accounting_3",
+      "category": "Business",
+      "subject": "Accounting",
+      "donor_id": "validation_Design_15"
+    },
+    {
+      "id": "validation_Accounting_16",
+      "category": "Business",
+      "subject": "Accounting",
+      "donor_id": "test_Economics_169"
+    },
+    {
+      "id": "validation_Accounting_20",
+      "category": "Business",
+      "subject": "Accounting",
+      "donor_id": "validation_Music_11"
+    },
+    {
+      "id": "validation_Accounting_30",
+      "category": "Business",
+      "subject": "Accounting",
+      "donor_id": "test_Geography_61"
+    },
+    {
+      "id": "validation_Pharmacy_22",
+      "category": "Health and Medicine",
+      "subject": "Pharmacy",
+      "donor_id": "validation_Accounting_30"
+    },
+    {
+      "id": "validation_Pharmacy_24",
+      "category": "Health and Medicine",
+      "subject": "Pharmacy",
+      "donor_id": "test_Electronics_11"
+    },
+    {
+      "id": "validation_Diagnostics_and_Laboratory_Medicine_27",
+      "category": "Health and Medicine",
+      "subject": "Diagnostics_and_Laboratory_Medicine",
+      "donor_id": "validation_Clinical_Medicine_8"
+    },
+    {
+      "id": "validation_Diagnostics_and_Laboratory_Medicine_10",
+      "category": "Health and Medicine",
+      "subject": "Diagnostics_and_Laboratory_Medicine",
+      "donor_id": "validation_Physics_23"
+    },
+    {
+      "id": "validation_History_9",
+      "category": "Humanities and Social Science",
+      "subject": "History",
+      "donor_id": "test_Accounting_13"
+    },
+    {
+      "id": "validation_History_10",
+      "category": "Humanities and Social Science",
+      "subject": "History",
+      "donor_id": "test_Accounting_201"
+    },
+    {
+      "id": "validation_History_8",
+      "category": "Humanities and Social Science",
+      "subject": "History",
+      "donor_id": "validation_Biology_15"
+    },
+    {
+      "id": "validation_History_6",
+      "category": "Humanities and Social Science",
+      "subject": "History",
+      "donor_id": "validation_Psychology_29"
+    },
+    {
+      "id": "validation_Math_12",
+      "category": "Science",
+      "subject": "Math",
+      "donor_id": "test_Physics_369"
+    },
+    {
+      "id": "validation_Physics_18",
+      "category": "Science",
+      "subject": "Physics",
+      "donor_id": "test_Materials_392"
+    },
+    {
+      "id": "validation_Math_8",
+      "category": "Science",
+      "subject": "Math",
+      "donor_id": "validation_Mechanical_Engineering_10"
+    },
+    {
+      "id": "validation_Math_2",
+      "category": "Science",
+      "subject": "Math",
+      "donor_id": "test_Pharmacy_140"
+    },
+    {
+      "id": "validation_Agriculture_9",
+      "category": "Tech and Engineering",
+      "subject": "Agriculture",
+      "donor_id": "test_Art_Theory_256"
+    },
+    {
+      "id": "validation_Agriculture_21",
+      "category": "Tech and Engineering",
+      "subject": "Agriculture",
+      "donor_id": "test_Agriculture_139"
+    },
+    {
+      "id": "validation_Agriculture_17",
+      "category": "Tech and Engineering",
+      "subject": "Agriculture",
+      "donor_id": "test_Economics_215"
+    },
+    {
+      "id": "validation_Agriculture_13",
+      "category": "Tech and Engineering",
+      "subject": "Agriculture",
+      "donor_id": "test_Accounting_312"
+    }
+  ]
+}

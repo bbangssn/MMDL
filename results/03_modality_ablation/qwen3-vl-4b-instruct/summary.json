@@ -1,0 +1,79 @@
+{
+  "sample_count": 200,
+  "conditions": {
+    "full": {
+      "total": 200,
+      "correct": 96,
+      "accuracy": 0.48,
+      "fallbacks": 3,
+      "prediction_agreement_with_full": 1.0,
+      "accuracy_delta_vs_full": 0.0,
+      "accuracy_delta_95pct_bootstrap_ci": null,
+      "runtime": {
+        "total_elapsed_seconds": null,
+        "mean_elapsed_seconds": null,
+        "timed_samples": 0,
+        "untimed_legacy_samples": 200
+      }
+    },
+    "text_only": {
+      "total": 200,
+      "correct": 48,
+      "accuracy": 0.24,
+      "fallbacks": 0,
+      "prediction_agreement_with_full": 0.365,
+      "accuracy_delta_vs_full": -0.24,
+      "accuracy_delta_95pct_bootstrap_ci": [
+        -0.32,
+        -0.16
+      ],
+      "runtime": {
+        "total_elapsed_seconds": 111.088,
+        "mean_elapsed_seconds": 0.555,
+        "timed_samples": 200,
+        "untimed_legacy_samples": 0
+      }
+    },
+    "shuffled_image": {
+      "total": 200,
+      "correct": 42,
+      "accuracy": 0.21,
+      "fallbacks": 1,
+      "prediction_agreement_with_full": 0.33,
+      "accuracy_delta_vs_full": -0.27,
+      "accuracy_delta_95pct_bootstrap_ci": [
+        -0.35,
+        -0.195
+      ],
+      "runtime": {
+        "total_elapsed_seconds": 154.608,
+        "mean_elapsed_seconds": 0.773,
+        "timed_samples": 200,
+        "untimed_legacy_samples": 0
+      }
+    },
+    "blank_image": {
+      "total": 200,
+      "correct": 47,
+      "accuracy": 0.235,
+      "fallbacks": 1,
+      "prediction_agreement_with_full": 0.385,
+      "accuracy_delta_vs_full": -0.245,
+      "accuracy_delta_95pct_bootstrap_ci": [
+        -0.325,
+        -0.165
+      ],
+      "runtime": {
+        "total_elapsed_seconds": 123.8,
+        "mean_elapsed_seconds": 0.619,
+        "timed_samples": 200,
+        "untimed_legacy_samples": 0
+      }
+    }
+  },
+  "benchmark": "MMMU-Pro standard10 modality ablation",
+  "model": "qwen3-vl-4b-instruct",
+  "status": "completed",
+  "generated_this_session": 600,
+  "session_elapsed_seconds": 463.747
+}
