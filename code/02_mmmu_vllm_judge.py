@@ -7,6 +7,7 @@ VISIBLE_GPU = "0"
 os.environ["CUDA_VISIBLE_DEVICES"] = VISIBLE_GPU
 
 from datetime import datetime
+import random
 import re
 import time
 
@@ -43,6 +44,9 @@ SOURCE_MODEL = 0  # Index in utils.MODELS
 SOURCE_RUN_TAG = "official-penalty-1p5"
 JUDGE_MODEL_NAME = "llama-3.1-8b-instruct"
 JUDGE_MODEL_ID = "meta-llama/Llama-3.1-8B-Instruct"
+JUDGE_RUN_TAG = "greedy-random-fallback"
+RANDOM_SEED = 42
+REUSE_LEGACY_JUDGE_OUTPUTS = True
 LIMIT = None  # Number of fallback samples to judge; None judges all of them
 LOG_EVERY = 10
 MAX_NEW_TOKENS = 4096
@@ -118,10 +122,11 @@ def main() -> None:
 
     output_dir = (
         RESULTS_ROOT / "02_mmmu_vllm_judge" / SOURCE_RUN_TAG /
-        source_spec.name / JUDGE_MODEL_NAME
+        source_spec.name / JUDGE_MODEL_NAME / JUDGE_RUN_TAG
     )
     predictions_path = output_dir / "judge_predictions.jsonl"
     progress_path = output_dir / "progress.json"
+    legacy_predictions_path = output_dir.parent / "judge_predictions.jsonl"
     config = {
         "benchmark": "MMMU validation vLLM LLM-as-a-Judge",
         "dataset": DATA_PATH,
@@ -132,12 +137,17 @@ def main() -> None:
         "source_predictions": str(source_path.relative_to(RESULTS_ROOT)),
         "judge_model": JUDGE_MODEL_NAME,
         "judge_model_path": JUDGE_MODEL_ID,
+        "judge_run_tag": JUDGE_RUN_TAG,
         "judge_backend": "transformers",
         "judge_scope": "rule-parser fallbacks only",
         "prompt_version": PROMPT_VERSION,
         "official_prompt": True,
         "official_default_judge": "gpt-3.5-turbo-0125",
         "do_sample": False,
+        "judge_retry_count": 1,
+        "random_fallback": True,
+        "random_seed": RANDOM_SEED,
+        "reused_legacy_judge_outputs": REUSE_LEGACY_JUDGE_OUTPUTS,
         "max_new_tokens": MAX_NEW_TOKENS,
         "max_model_length": MAX_MODEL_LENGTH,
     }
@@ -146,6 +156,15 @@ def main() -> None:
     write_json(output_dir / "environment.json", collect_environment())
 
     judge_rows, completed_ids = load_completed_predictions(predictions_path)
+    legacy_by_id = {}
+    if REUSE_LEGACY_JUDGE_OUTPUTS and legacy_predictions_path.exists():
+        legacy_rows, _ = load_completed_predictions(legacy_predictions_path)
+        legacy_by_id = {str(row["id"]): row for row in legacy_rows}
+        print(
+            f"Reusing {len(legacy_by_id)} existing greedy judge outputs from "
+            f"{legacy_predictions_path}.",
+            flush=True,
+        )
     unknown_ids = completed_ids - fallback_by_id.keys()
     if unknown_ids:
         raise ValueError(
@@ -189,25 +208,39 @@ def main() -> None:
             else:
                 gold = str(sample["answer"]).strip().upper()
 
-            if judge is None:
-                judge = TextJudge(JUDGE_MODEL_ID, MODEL_CACHE / "hub")
-
             prompt = build_judge_prompt(
                 str(sample["question"]),
                 options,
                 str(source["response"]),
                 open_question,
             )
-            started = time.perf_counter()
-            judge_response = judge.generate(
-                prompt,
-                max_new_tokens=MAX_NEW_TOKENS,
-                max_model_length=MAX_MODEL_LENGTH,
-            )
-            elapsed_seconds = time.perf_counter() - started
+            legacy = legacy_by_id.get(sample_id)
+            reused_judge_output = legacy is not None
+            if reused_judge_output:
+                judge_response = str(legacy.get("judge_raw_output", ""))
+                elapsed_seconds = float(legacy.get("elapsed_seconds", 0.0))
+            else:
+                if judge is None:
+                    judge = TextJudge(JUDGE_MODEL_ID, MODEL_CACHE / "hub")
+                started = time.perf_counter()
+                judge_response = judge.generate(
+                    prompt,
+                    max_new_tokens=MAX_NEW_TOKENS,
+                    max_model_length=MAX_MODEL_LENGTH,
+                )
+                elapsed_seconds = time.perf_counter() - started
             prediction = parse_judge_answer(judge_response, options)
             resolved = bool(prediction)
-            correct = resolved and prediction == gold
+            random_fallback_used = not resolved
+            final_prediction = prediction
+            if random_fallback_used:
+                # Match Qwen's final fallback: choose from valid options plus Z.
+                # Per-sample RNG keeps interrupted/resumed runs identical.
+                fallback_rng = random.Random(f"{RANDOM_SEED}:{sample_id}")
+                final_prediction = fallback_rng.choice(
+                    [chr(65 + index) for index in range(len(options))] + ["Z"]
+                )
+            correct = final_prediction == gold
 
             row = {
                 "id": sample["id"],
@@ -218,7 +251,9 @@ def main() -> None:
                 "judge_prediction": prediction,
                 "judge_raw_output": judge_response,
                 "judge_resolved": resolved,
-                "final_prediction": prediction if resolved else source.get("prediction", ""),
+                "random_fallback_used": random_fallback_used,
+                "reused_judge_output": reused_judge_output,
+                "final_prediction": final_prediction,
                 "gold": gold,
                 "correct": correct,
                 "open_question_reformatted": open_question,
@@ -256,10 +291,13 @@ def main() -> None:
     for source in source_rows:
         final = dict(source)
         judged = judged_by_id.get(str(source["id"]))
-        if judged and judged["judge_resolved"]:
-            final["prediction"] = judged["judge_prediction"]
+        if judged:
+            final["prediction"] = judged["final_prediction"]
             final["correct"] = bool(judged["correct"])
             final["judge_used"] = True
+            final["random_fallback_used"] = bool(
+                judged.get("random_fallback_used", False)
+            )
         else:
             final["judge_used"] = False
         final_rows.append(final)
@@ -267,6 +305,9 @@ def main() -> None:
     baseline_correct = sum(bool(row["correct"]) for row in source_rows)
     final_correct = sum(bool(row["correct"]) for row in final_rows)
     resolved_count = sum(bool(row["judge_resolved"]) for row in judge_rows)
+    random_fallback_count = sum(
+        bool(row.get("random_fallback_used", False)) for row in judge_rows
+    )
     recovered_correct = sum(bool(row["correct"]) for row in judge_rows)
     status = "completed" if len(judge_rows) >= len(fallback_rows) else "limit_reached"
     summary = {
@@ -281,6 +322,10 @@ def main() -> None:
         "judged_samples": len(judge_rows),
         "judge_resolved": resolved_count,
         "judge_unresolved": len(judge_rows) - resolved_count,
+        "random_fallback_samples": random_fallback_count,
+        "reused_judge_outputs": sum(
+            bool(row.get("reused_judge_output", False)) for row in judge_rows
+        ),
         "recovered_correct": recovered_correct,
         "baseline_correct": baseline_correct,
         "baseline_accuracy": baseline_correct / len(source_rows),
@@ -295,11 +340,11 @@ def main() -> None:
             "scope": "rule-parser fallbacks only",
             "prompt_version": PROMPT_VERSION,
             "retry_count": 1,
-            "random_fallback": False,
+            "random_fallback": True,
+            "random_seed": RANDOM_SEED,
             "known_differences": [
                 "Llama 3.1 8B replaces the official default GPT-3.5 judge.",
-                "Deterministic local inference is not retried 25 times.",
-                "Failed extraction remains unresolved instead of random A/B/C/D/Z fallback.",
+                "Deterministic local inference is called once instead of up to 25 times.",
             ],
             "do_sample": False,
             "max_new_tokens": MAX_NEW_TOKENS,

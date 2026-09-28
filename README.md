@@ -83,7 +83,7 @@ results/01_mmmu_pro/<setting>/<model>/
 
 `predictions.jsonl`에는 sample ID, category, subject, 문제 유형, 정답, raw model output, parsed answer, 정오 및 sample runtime이 저장됩니다. `summary.json`에는 overall/category/subject accuracy와 runtime 집계가 저장됩니다. `environment.json`에는 GPU/VRAM, CPU, RAM, OS, Python, CUDA 및 주요 package version이 기록됩니다.
 
-vLLM 전용 judge는 `results/02_mmmu_vllm_judge/<run-tag>/<source-model>/<judge-model>/`에 별도로 저장되며, `02_mmmu_vllm_judge.py`의 `SOURCE_RUN_TAG`로 입력 vLLM 실행을 선택합니다.
+vLLM 전용 judge는 `results/02_mmmu_vllm_judge/<run-tag>/<source-model>/<judge-model>/<judge-run-tag>/`에 별도로 저장되며, `02_mmmu_vllm_judge.py`의 `SOURCE_RUN_TAG`로 입력 vLLM 실행을 선택합니다.
 
 재실행하면 완료된 sample ID를 건너뛰고 자동 재개합니다. 결과에 영향을 주는 설정이 기존 `config.json`과 다르면 서로 다른 조건의 결과가 섞이지 않도록 실행을 중단합니다. 새 조건으로 실험할 때는 해당 결과 디렉터리를 먼저 백업하십시오.
 
@@ -91,7 +91,7 @@ vLLM 실험은 `results/00_mmmu_vllm/<run-tag>/<model>/`에 저장됩니다. `co
 
 ## vLLM 결과
 
-- MMMU Validation rule-only: **217/900 (24.11%)**; local Llama judge 적용 후 **436/900 (48.44%)**
+- MMMU Validation rule-only: **217/900 (24.11%)**; local Llama judge와 seeded random fallback 적용 후 **469/900 (52.11%)**
 - MMMU-Pro standard10 test: **724/1,730 (41.85%)**
 - MMMU-Pro modality ablation (각 200개): full **48.0%**, text-only **24.0%**, shuffled-image **21.0%**, blank-image **23.5%**
 - 24문항 병목 probe: direct **29.2%**, oracle rationale **45.8%**, shuffled-image **16.7%**, 3-seed prediction stability **45.8%**
@@ -112,7 +112,7 @@ vLLM 실험은 `results/00_mmmu_vllm/<run-tag>/<model>/`에 저장됩니다. `co
 - **Sampling:** `temperature=0.7`, `top_p=0.8`, `top_k=20`, `repetition_penalty=1.0`, `presence_penalty=1.5`를 사용합니다. Qwen 공식 Instruct recipe와 같고, 측정 seed는 42로 고정합니다(공식 공개 seed 3407과 다름).
 - **Raw 결과와 runtime:** 최종 점수만으로는 failure 원인을 검증할 수 없으므로 raw response와 sample runtime을 보존합니다. runtime이 없는 행은 임의로 추정하지 않고 `untimed_legacy_samples`로 분리합니다.
 - **Fallback 점수:** 분석 노트북의 기본 accuracy는 parser fallback 문항을 제외합니다. 전체 raw accuracy와 fallback 제외 accuracy를 구분해 보고해야 합니다.
-- **LLM-as-a-Judge:** Qwen3-VL 공식 MMMU `build_prompt()` 문구와 option 포맷을 그대로 사용하고, 기본 GPT-3.5 judge 대신 로컬 Llama 3.1 8B Instruct를 사용합니다. Qwen과 judge를 동시에 올리지 않고 raw prediction 저장 후 별도 프로세스로 실행합니다. 공식 코드의 25회 API retry와 최종 random fallback은 deterministic 로컬 추론에 적용하지 않으며, 실패는 unresolved로 남깁니다. 적용 전·후 점수와 판정 문항 수를 따로 보고합니다.
+- **LLM-as-a-Judge:** Qwen3-VL 공식 MMMU `build_prompt()` 문구와 option 포맷을 그대로 사용하고, 기본 GPT-3.5 judge 대신 로컬 Llama 3.1 8B Instruct를 사용합니다. Qwen과 judge를 동시에 올리지 않고 raw prediction 저장 후 별도 프로세스로 실행합니다. Greedy local judge는 문항당 한 번 호출하며, 추출 실패 시 공식 구현처럼 유효 선택지와 `Z` 중 하나를 seeded random fallback으로 선택합니다. 공식 구현의 최대 25회 재질의는 생략합니다.
 - **병목 pilot:** 실험 04는 공식 설명이 있고 이미지가 하나인 MMMU-Pro 문항을 대분야별 4개씩 뽑은 24문항 진단입니다. benchmark 점수가 아니라 prompt, 해상도, 선택지 순서, 이미지 충돌, sampling 반응을 빠르게 비교하는 방향성 실험입니다. 동일 표본 paired 비교와 fallback 제외 정확도를 함께 보고합니다.
 
 ## 분석 원칙
