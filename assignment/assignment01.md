@@ -50,7 +50,7 @@ Question: {question}
 이미지는 Qwen chat template의 image content로 질문과 함께 전달한다.
 
 - **출처**: [Qwen3-VL 공식 MMMU evaluation의 prompt 구성](https://github.com/QwenLM/Qwen3-VL/tree/main/evaluation/mmmu)
-- **선택 이유**: 강의자료의 공개 성능과 비교할 때 prompt 차이를 줄이고, 임의의 정답 형식 지시로 점수를 변경하지 않기 위해 공식 공개 구현의 문구를 유지하였다.
+- **선택 이유**: 공개 성능과 비교할 때 prompt 차이를 줄이고, 임의의 정답 형식 지시로 점수를 변경하지 않기 위해 공식 공개 구현의 문구를 유지하였다.
 
 
 ### Local LLM judge 프롬프트
@@ -110,7 +110,7 @@ Your output:
 ## 4. 채점(파싱) 방식
 
 - **사용한 로직**: [Qwen3-VL 공식 MMMU evaluation](https://github.com/QwenLM/Qwen3-VL/tree/main/evaluation/mmmu)의 rule-based option extractor와 judge prompt를 참고해 구현하였다.
-- **1차 rule parser**: 거부 응답을 `Z`로 처리한 뒤, 구두점을 제거한 token에서 유일한 option letter를 찾는다. letter가 모호하면 응답에 유일하게 등장하는 option text를 찾는다. 후보가 없거나 여러 개면 unresolved로 남긴다. Qwen3-VL 공식 평가 코드의 방식을 사용하였다.
+- **rule parser**: 거부 응답을 `Z`로 처리한 뒤, 구두점을 제거한 token에서 유일한 option letter를 찾는다. letter가 모호하면 응답에 유일하게 등장하는 option text를 찾는다. 후보가 없거나 여러 개면 unresolved로 남긴다. Qwen3-VL 공식 평가 코드의 방식을 사용하였다.
 - **Short-answer 처리**: Qwen 공개 전처리와 같이 ground-truth answer를 A, `Other Answers`를 B로 놓은 판정 문제로 변환한다.
 - **Fallback judge**: rule parser가 처리하지 못한 문항에는 로컬 `meta-llama/Llama-3.1-8B-Instruct`를 greedy decoding으로 1회 적용하였다. Judge도 처리하지 못한 문항은 공식 구현과 같이 random fallback으로 답을 선택하였다.
 - **공식 구현과의 차이**: 공식 judge인 `gpt-3.5-turbo-0125` 대신 로컬 `Llama-3.1-8B`를 사용하고, 최대 25회 재질의 대신 1회만 호출하였다.
