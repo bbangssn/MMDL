@@ -1,7 +1,7 @@
 # Assignment 01: MMMU-val Baseline Evaluation Report — Qwen3-VL-4B-Instruct
 
 - **팀명**: 13조
-- **팀원**: 강영선, 김윤나, 민희진, 송민수
+- **팀원**: 강영선, 김윤나, 임희진, 송민수
 - **작성일**: 2026-09-28
 - **재현 커맨드**: `python code/run_mmmu_baseline.py`
 
@@ -176,6 +176,10 @@ Your output:
 ## 8. 기타 특이사항 / 한계 (Optional)
 
 - **Runtime:** Qwen vLLM inference는 00:15:53, 평균 요청 시간은 0.961초/문항이었다.
-- **취약 영역:** 최종 category 기준 Art and Design 48.3%, Tech and Engineering 49.5%가 낮았고, subject 중에서는 Music 26.7%, Diagnostics and Laboratory Medicine 33.3%가 낮았다. 실제 오답에는 병리 영상의 단정적 오인, resource-allocation graph 관계 반전, 항공사진 계산의 단위 변환 실패, 장문 계산 후 최종 답 누락이 있었다.
-- **다음 단계:** 낮은 성능을 보인 분야의 오류 사례를 바탕으로 fine-tuning 데이터를 구성한다.
 - **Peak VRAM 측정:** vLLM 실행에서 KV cache 예약 공간을 포함해 39.412 GiB가 측정되었다.
+- **취약 영역:** Category 중 Art and Design 48.3%, Tech and Engineering 49.5%가 낮았고, subject 중에서는 Music 26.7%, Diagnostics and Laboratory Medicine 33.3%가 낮았다.
+- **Bottleneck probe:** MMMU-Pro의 6개 대분야에서 이미지가 한 개인 문항을 4개씩 선정하여 동일한 24문항에 입력 조건을 바꾸는 paired 실험을 수행하였다. Direct 조건은 7/24(29.2%)였으며, 이미지 해상도를 높인 조건은 9/24(37.5%)로 8.3%p 높았다. 소규모 표본이므로 일반화할 수는 없지만, 고해상도 입력에서 정확도가 높아지는 경향이 관찰되었다.
+- **응답 길이:** vLLM의 900개 raw response를 문자 수 기준 5분위로 나누었을 때, 가장 짧은 180개의 최종 정확도는 61.7%, 가장 긴 180개는 40.0%였다. Rule parser fallback 비율도 각각 35.0%와 89.4%로 차이가 났다. 긴 응답에서 파싱 실패와 오답이 함께 증가하는 경향이 있었지만, 문제 난이도의 영향이 섞여 있을 수 있으므로 인과관계로 해석하지 않았다.
+- **출력 안정성:** 동일한 24문항을 세 seed로 평가했을 때 세 답이 모두 같은 문항은 45.8%였다. Sampling에 따라 답이 달라지는 경향이 있어 단일 실행 결과의 변동 가능성을 고려해야 한다.
+- **Conflict control:** 무관한 이미지가 포함되었음을 알린 조건과 알리지 않은 조건은 모두 16.7%였다. 이 표본에서는 경고 문구만으로 이미지 충돌을 완화하지 못하였다.
+- **분석 한계:** Bottleneck probe와 conflict control은 24문항의 소규모 실험이므로 전체 benchmark에 일반화할 수 없다. 관찰된 차이는 이후 실험과 fine-tuning 방향을 정하기 위한 보조 근거로 사용한다.
