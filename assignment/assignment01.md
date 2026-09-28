@@ -1,7 +1,7 @@
 # Assignment 01: MMMU-val Baseline Evaluation Report — Qwen3-VL-4B-Instruct
 
 - **팀명**: 13조
-- **팀원**: 강영선, 김윤나, 임희진, 송민수
+- **팀원**: 강영선, 김윤나, 송민수, 임희진
 - **작성일**: 2026-09-28
 - **재현 커맨드**: `python code/run_mmmu_baseline.py`
 
