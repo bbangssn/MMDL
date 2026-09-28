@@ -78,7 +78,7 @@ Your output:
 
 - **출처**: Qwen3-VL 공개 MMMU `eval_utils.build_prompt()`를 문구 수정 없이 사용하였다.
 - **Judge model 및 decoding**: `meta-llama/Llama-3.1-8B-Instruct`, greedy decoding, `max_new_tokens=4096`, `max_model_length=9048`.
-- **선택 이유**: 공식 기본 judge인 `gpt-3.5-turbo-0125`는 로컬 checkpoint로 내려받을 수 없으므로, 단일 GPU에서 실행 가능한 instruction-tuned 8B 모델로 대체하였다. 따라서 prompt는 공식과 같지만 judge 모델은 공식 조건과 다르다.
+- **선택 이유**: 공식 평가에서는 `gpt-3.5-turbo-0125`를 judge로 사용하지만, API 호출 비용과 외부 서비스 의존성을 고려하여 본 실험에서는 로컬에서 실행 가능한 `Llama-3.1-8B-Instruct`로 대체하였다. 따라서 prompt는 공식과 같지만 judge 모델은 공식 조건과 다르다.
 
 ## 3. 생성(Decoding) 설정
 
