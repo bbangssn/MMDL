@@ -32,7 +32,6 @@ Qwen3-VL-4B-Instruct의 MMMU/MMMU-Pro baseline을 재현하고, 이후 failure a
 모든 Qwen 추론 실험은 `vllm>=0.11.0`을 공통 backend로 사용합니다.
 
 ```bash
-conda activate MMDL
 pip install -r code/requirements.txt
 ```
 
@@ -40,7 +39,6 @@ pip install -r code/requirements.txt
 ## 실행
 
 ```bash
-conda activate MMDL
 pip install -r code/requirements.txt
 
 python code/download_assets.py
