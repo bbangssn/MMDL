@@ -1,0 +1,326 @@
+{
+  "conditions": {
+    "full": {
+      "total": 200,
+      "rule_correct": 49,
+      "rule_accuracy": 0.245,
+      "rule_fallbacks": 135,
+      "judge_resolved": 82,
+      "random_fallbacks": 53,
+      "final_correct": 107,
+      "final_accuracy": 0.535
+    },
+    "text_only": {
+      "total": 200,
+      "rule_correct": 39,
+      "rule_accuracy": 0.195,
+      "rule_fallbacks": 127,
+      "judge_resolved": 81,
+      "random_fallbacks": 46,
+      "final_correct": 87,
+      "final_accuracy": 0.435,
+      "final_delta_vs_full": -0.10000000000000003,
+      "final_delta_95pct_bootstrap_ci": [
+        -0.175,
+        -0.025
+      ]
+    },
+    "shuffled_image": {
+      "total": 200,
+      "rule_correct": 35,
+      "rule_accuracy": 0.175,
+      "rule_fallbacks": 134,
+      "judge_resolved": 78,
+      "random_fallbacks": 56,
+      "final_correct": 84,
+      "final_accuracy": 0.42,
+      "final_delta_vs_full": -0.11500000000000005,
+      "final_delta_95pct_bootstrap_ci": [
+        -0.195,
+        -0.03
+      ]
+    },
+    "blank_image": {
+      "total": 200,
+      "rule_correct": 33,
+      "rule_accuracy": 0.165,
+      "rule_fallbacks": 129,
+      "judge_resolved": 79,
+      "random_fallbacks": 50,
+      "final_correct": 84,
+      "final_accuracy": 0.42,
+      "final_delta_vs_full": -0.11500000000000005,
+      "final_delta_95pct_bootstrap_ci": [
+        -0.19,
+        -0.04
+      ]
+    }
+  },
+  "categories": {
+    "full": {
+      "Art and Design": {
+        "total": 27,
+        "rule_correct": 13,
+        "rule_accuracy": 0.48148148148148145,
+        "rule_fallbacks": 14,
+        "judge_resolved": 10,
+        "random_fallbacks": 4,
+        "final_correct": 20,
+        "final_accuracy": 0.7407407407407407
+      },
+      "Business": {
+        "total": 34,
+        "rule_correct": 15,
+        "rule_accuracy": 0.4411764705882353,
+        "rule_fallbacks": 16,
+        "judge_resolved": 8,
+        "random_fallbacks": 8,
+        "final_correct": 21,
+        "final_accuracy": 0.6176470588235294
+      },
+      "Health and Medicine": {
+        "total": 33,
+        "rule_correct": 4,
+        "rule_accuracy": 0.12121212121212122,
+        "rule_fallbacks": 27,
+        "judge_resolved": 16,
+        "random_fallbacks": 11,
+        "final_correct": 14,
+        "final_accuracy": 0.42424242424242425
+      },
+      "Humanities and Social Science": {
+        "total": 26,
+        "rule_correct": 4,
+        "rule_accuracy": 0.15384615384615385,
+        "rule_fallbacks": 19,
+        "judge_resolved": 10,
+        "random_fallbacks": 9,
+        "final_correct": 15,
+        "final_accuracy": 0.5769230769230769
+      },
+      "Science": {
+        "total": 33,
+        "rule_correct": 5,
+        "rule_accuracy": 0.15151515151515152,
+        "rule_fallbacks": 24,
+        "judge_resolved": 16,
+        "random_fallbacks": 8,
+        "final_correct": 17,
+        "final_accuracy": 0.5151515151515151
+      },
+      "Tech and Engineering": {
+        "total": 47,
+        "rule_correct": 8,
+        "rule_accuracy": 0.1702127659574468,
+        "rule_fallbacks": 35,
+        "judge_resolved": 22,
+        "random_fallbacks": 13,
+        "final_correct": 20,
+        "final_accuracy": 0.425531914893617
+      }
+    },
+    "text_only": {
+      "Art and Design": {
+        "total": 27,
+        "rule_correct": 8,
+        "rule_accuracy": 0.2962962962962963,
+        "rule_fallbacks": 14,
+        "judge_resolved": 7,
+        "random_fallbacks": 7,
+        "final_correct": 11,
+        "final_accuracy": 0.4074074074074074
+      },
+      "Business": {
+        "total": 34,
+        "rule_correct": 8,
+        "rule_accuracy": 0.23529411764705882,
+        "rule_fallbacks": 19,
+        "judge_resolved": 15,
+        "random_fallbacks": 4,
+        "final_correct": 17,
+        "final_accuracy": 0.5
+      },
+      "Health and Medicine": {
+        "total": 33,
+        "rule_correct": 4,
+        "rule_accuracy": 0.12121212121212122,
+        "rule_fallbacks": 24,
+        "judge_resolved": 17,
+        "random_fallbacks": 7,
+        "final_correct": 12,
+        "final_accuracy": 0.36363636363636365
+      },
+      "Humanities and Social Science": {
+        "total": 26,
+        "rule_correct": 6,
+        "rule_accuracy": 0.23076923076923078,
+        "rule_fallbacks": 16,
+        "judge_resolved": 7,
+        "random_fallbacks": 9,
+        "final_correct": 13,
+        "final_accuracy": 0.5
+      },
+      "Science": {
+        "total": 33,
+        "rule_correct": 6,
+        "rule_accuracy": 0.18181818181818182,
+        "rule_fallbacks": 21,
+        "judge_resolved": 14,
+        "random_fallbacks": 7,
+        "final_correct": 15,
+        "final_accuracy": 0.45454545454545453
+      },
+      "Tech and Engineering": {
+        "total": 47,
+        "rule_correct": 7,
+        "rule_accuracy": 0.14893617021276595,
+        "rule_fallbacks": 33,
+        "judge_resolved": 21,
+        "random_fallbacks": 12,
+        "final_correct": 19,
+        "final_accuracy": 0.40425531914893614
+      }
+    },
+    "shuffled_image": {
+      "Art and Design": {
+        "total": 27,
+        "rule_correct": 7,
+        "rule_accuracy": 0.25925925925925924,
+        "rule_fallbacks": 18,
+        "judge_resolved": 9,
+        "random_fallbacks": 9,
+        "final_correct": 9,
+        "final_accuracy": 0.3333333333333333
+      },
+      "Business": {
+        "total": 34,
+        "rule_correct": 5,
+        "rule_accuracy": 0.14705882352941177,
+        "rule_fallbacks": 19,
+        "judge_resolved": 14,
+        "random_fallbacks": 5,
+        "final_correct": 14,
+        "final_accuracy": 0.4117647058823529
+      },
+      "Health and Medicine": {
+        "total": 33,
+        "rule_correct": 4,
+        "rule_accuracy": 0.12121212121212122,
+        "rule_fallbacks": 24,
+        "judge_resolved": 13,
+        "random_fallbacks": 11,
+        "final_correct": 17,
+        "final_accuracy": 0.5151515151515151
+      },
+      "Humanities and Social Science": {
+        "total": 26,
+        "rule_correct": 3,
+        "rule_accuracy": 0.11538461538461539,
+        "rule_fallbacks": 22,
+        "judge_resolved": 10,
+        "random_fallbacks": 12,
+        "final_correct": 11,
+        "final_accuracy": 0.4230769230769231
+      },
+      "Science": {
+        "total": 33,
+        "rule_correct": 5,
+        "rule_accuracy": 0.15151515151515152,
+        "rule_fallbacks": 22,
+        "judge_resolved": 13,
+        "random_fallbacks": 9,
+        "final_correct": 15,
+        "final_accuracy": 0.45454545454545453
+      },
+      "Tech and Engineering": {
+        "total": 47,
+        "rule_correct": 11,
+        "rule_accuracy": 0.23404255319148937,
+        "rule_fallbacks": 29,
+        "judge_resolved": 19,
+        "random_fallbacks": 10,
+        "final_correct": 18,
+        "final_accuracy": 0.3829787234042553
+      }
+    },
+    "blank_image": {
+      "Art and Design": {
+        "total": 27,
+        "rule_correct": 7,
+        "rule_accuracy": 0.25925925925925924,
+        "rule_fallbacks": 12,
+        "judge_resolved": 6,
+        "random_fallbacks": 6,
+        "final_correct": 10,
+        "final_accuracy": 0.37037037037037035
+      },
+      "Business": {
+        "total": 34,
+        "rule_correct": 6,
+        "rule_accuracy": 0.17647058823529413,
+        "rule_fallbacks": 18,
+        "judge_resolved": 14,
+        "random_fallbacks": 4,
+        "final_correct": 14,
+        "final_accuracy": 0.4117647058823529
+      },
+      "Health and Medicine": {
+        "total": 33,
+        "rule_correct": 3,
+        "rule_accuracy": 0.09090909090909091,
+        "rule_fallbacks": 24,
+        "judge_resolved": 17,
+        "random_fallbacks": 7,
+        "final_correct": 12,
+        "final_accuracy": 0.36363636363636365
+      },
+      "Humanities and Social Science": {
+        "total": 26,
+        "rule_correct": 4,
+        "rule_accuracy": 0.15384615384615385,
+        "rule_fallbacks": 20,
+        "judge_resolved": 11,
+        "random_fallbacks": 9,
+        "final_correct": 15,
+        "final_accuracy": 0.5769230769230769
+      },
+      "Science": {
+        "total": 33,
+        "rule_correct": 3,
+        "rule_accuracy": 0.09090909090909091,
+        "rule_fallbacks": 23,
+        "judge_resolved": 12,
+        "random_fallbacks": 11,
+        "final_correct": 15,
+        "final_accuracy": 0.45454545454545453
+      },
+      "Tech and Engineering": {
+        "total": 47,
+        "rule_correct": 10,
+        "rule_accuracy": 0.2127659574468085,
+        "rule_fallbacks": 32,
+        "judge_resolved": 19,
+        "random_fallbacks": 13,
+        "final_correct": 18,
+        "final_accuracy": 0.3829787234042553
+      }
+    }
+  },
+  "benchmark": "MMMU validation modality ablation local judge",
+  "status": "completed",
+  "source_model": "qwen3-vl-4b-instruct",
+  "judge_model": "meta-llama/Llama-3.1-8B-Instruct",
+  "source_samples": 800,
+  "fallback_samples": 525,
+  "judged_samples": 525,
+  "judge_resolved": 320,
+  "random_fallback_samples": 205,
+  "reused_baseline_judge_outputs": 135,
+  "runtime": {
+    "total_elapsed_seconds": 733.522,
+    "mean_elapsed_seconds": 1.397,
+    "timed_samples": 525,
+    "untimed_legacy_samples": 0,
+    "current_session_elapsed_seconds": 517.989
+  }
+}

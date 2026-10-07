@@ -50,7 +50,7 @@ def collect_environment() -> dict[str, Any]:
             name: _version(name)
             for name in (
                 "torch", "transformers", "datasets", "accelerate",
-                "qwen-vl-utils", "vllm", "tqdm",
+                "qwen-vl-utils", "vllm", "tqdm", "openai",
             )
         },
     }

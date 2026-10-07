@@ -1,0 +1,72 @@
+{
+  "benchmark": "MMMU Llama judge prompt ablation",
+  "status": "completed",
+  "sample_count": 596,
+  "conditions": {
+    "official_style_existing": {
+      "total": 596,
+      "judge_resolved": 389,
+      "resolution_rate": 0.6526845637583892,
+      "random_fallbacks": 207,
+      "correct": 252,
+      "accuracy": 0.4228187919463087,
+      "gpt_final_agreement": 0.5318791946308725,
+      "both_resolved_count": 288,
+      "gpt_agreement_when_both_resolved": 0.9305555555555556,
+      "mean_output_characters": 319.9697986577181,
+      "mean_output_words": 58.922818791946305,
+      "mean_elapsed_seconds": 1.5922936241610737
+    },
+    "existing_output_robust_parser": {
+      "total": 596,
+      "judge_resolved": 458,
+      "resolution_rate": 0.7684563758389261,
+      "random_fallbacks": 138,
+      "correct": 286,
+      "accuracy": 0.4798657718120805,
+      "gpt_final_agreement": 0.6090604026845637,
+      "both_resolved_count": 342,
+      "gpt_agreement_when_both_resolved": 0.9415204678362573,
+      "mean_output_characters": 319.9697986577181,
+      "mean_output_words": 58.922818791946305,
+      "mean_elapsed_seconds": 1.5922936241610737
+    },
+    "strict_128": {
+      "total": 596,
+      "judge_resolved": 594,
+      "resolution_rate": 0.9966442953020134,
+      "random_fallbacks": 2,
+      "correct": 356,
+      "accuracy": 0.5973154362416108,
+      "gpt_final_agreement": 0.7315436241610739,
+      "both_resolved_count": 442,
+      "gpt_agreement_when_both_resolved": 0.9253393665158371,
+      "mean_output_characters": 1.0,
+      "mean_output_words": 1.0,
+      "mean_elapsed_seconds": 0.13436241610738256
+    },
+    "strict_8": {
+      "total": 596,
+      "judge_resolved": 594,
+      "resolution_rate": 0.9966442953020134,
+      "random_fallbacks": 2,
+      "correct": 356,
+      "accuracy": 0.5973154362416108,
+      "gpt_final_agreement": 0.7315436241610739,
+      "both_resolved_count": 442,
+      "gpt_agreement_when_both_resolved": 0.9253393665158371,
+      "mean_output_characters": 1.0,
+      "mean_output_words": 1.0,
+      "mean_elapsed_seconds": 0.13780201342281878
+    }
+  },
+  "decision_metrics": [
+    "resolution_rate",
+    "accuracy",
+    "gpt_final_agreement",
+    "gpt_agreement_when_both_resolved",
+    "mean_output_characters",
+    "mean_elapsed_seconds"
+  ],
+  "session_elapsed_seconds": 215.843
+}

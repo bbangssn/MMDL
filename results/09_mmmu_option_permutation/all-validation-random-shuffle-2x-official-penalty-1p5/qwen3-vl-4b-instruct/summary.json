@@ -1,0 +1,1553 @@
+{
+  "sample_count": 847,
+  "permutation_repetitions": 2,
+  "conditions": {
+    "option_permuted_01": {
+      "total": 847,
+      "correct": 211,
+      "accuracy": 0.24911452184179456,
+      "fallbacks": 560,
+      "nonfallback_total": 287,
+      "accuracy_excluding_fallback": 0.735191637630662,
+      "runtime": {
+        "total_elapsed_seconds": 1721.276,
+        "mean_elapsed_seconds": 2.032,
+        "timed_samples": 847,
+        "untimed_legacy_samples": 0
+      },
+      "displayed_prediction_counts": {
+        "A": 34,
+        "B": 90,
+        "C": 94,
+        "D": 63,
+        "E": 5,
+        "F": 1,
+        "unresolved": 560
+      }
+    },
+    "option_permuted_02": {
+      "total": 847,
+      "correct": 224,
+      "accuracy": 0.2644628099173554,
+      "fallbacks": 539,
+      "nonfallback_total": 308,
+      "accuracy_excluding_fallback": 0.7272727272727273,
+      "runtime": {
+        "total_elapsed_seconds": 1724.602,
+        "mean_elapsed_seconds": 2.036,
+        "timed_samples": 847,
+        "untimed_legacy_samples": 0
+      },
+      "displayed_prediction_counts": {
+        "A": 26,
+        "B": 93,
+        "C": 114,
+        "D": 70,
+        "E": 5,
+        "unresolved": 539
+      }
+    }
+  },
+  "categories": {
+    "option_permuted_01": {
+      "Art and Design": {
+        "total": 120,
+        "correct": 43,
+        "accuracy": 0.35833333333333334,
+        "fallbacks": 62,
+        "nonfallback_total": 58,
+        "accuracy_excluding_fallback": 0.7413793103448276,
+        "runtime": {
+          "total_elapsed_seconds": 204.02,
+          "mean_elapsed_seconds": 1.7,
+          "timed_samples": 120,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 10,
+          "B": 17,
+          "C": 18,
+          "D": 13,
+          "unresolved": 62
+        }
+      },
+      "Business": {
+        "total": 134,
+        "correct": 49,
+        "accuracy": 0.3656716417910448,
+        "fallbacks": 79,
+        "nonfallback_total": 55,
+        "accuracy_excluding_fallback": 0.8909090909090909,
+        "runtime": {
+          "total_elapsed_seconds": 246.869,
+          "mean_elapsed_seconds": 1.842,
+          "timed_samples": 134,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 5,
+          "B": 18,
+          "C": 20,
+          "D": 11,
+          "E": 1,
+          "unresolved": 79
+        }
+      },
+      "Health and Medicine": {
+        "total": 145,
+        "correct": 32,
+        "accuracy": 0.2206896551724138,
+        "fallbacks": 100,
+        "nonfallback_total": 45,
+        "accuracy_excluding_fallback": 0.7111111111111111,
+        "runtime": {
+          "total_elapsed_seconds": 298.355,
+          "mean_elapsed_seconds": 2.058,
+          "timed_samples": 145,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 2,
+          "B": 21,
+          "C": 15,
+          "D": 6,
+          "F": 1,
+          "unresolved": 100
+        }
+      },
+      "Humanities and Social Science": {
+        "total": 119,
+        "correct": 28,
+        "accuracy": 0.23529411764705882,
+        "fallbacks": 82,
+        "nonfallback_total": 37,
+        "accuracy_excluding_fallback": 0.7567567567567568,
+        "runtime": {
+          "total_elapsed_seconds": 209.157,
+          "mean_elapsed_seconds": 1.758,
+          "timed_samples": 119,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 7,
+          "B": 9,
+          "C": 13,
+          "D": 8,
+          "unresolved": 82
+        }
+      },
+      "Science": {
+        "total": 137,
+        "correct": 26,
+        "accuracy": 0.1897810218978102,
+        "fallbacks": 94,
+        "nonfallback_total": 43,
+        "accuracy_excluding_fallback": 0.6046511627906976,
+        "runtime": {
+          "total_elapsed_seconds": 267.945,
+          "mean_elapsed_seconds": 1.956,
+          "timed_samples": 137,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 3,
+          "B": 17,
+          "C": 12,
+          "D": 11,
+          "unresolved": 94
+        }
+      },
+      "Tech and Engineering": {
+        "total": 192,
+        "correct": 33,
+        "accuracy": 0.171875,
+        "fallbacks": 143,
+        "nonfallback_total": 49,
+        "accuracy_excluding_fallback": 0.673469387755102,
+        "runtime": {
+          "total_elapsed_seconds": 494.93,
+          "mean_elapsed_seconds": 2.578,
+          "timed_samples": 192,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 7,
+          "B": 8,
+          "C": 16,
+          "D": 14,
+          "E": 4,
+          "unresolved": 143
+        }
+      }
+    },
+    "option_permuted_02": {
+      "Art and Design": {
+        "total": 120,
+        "correct": 43,
+        "accuracy": 0.35833333333333334,
+        "fallbacks": 60,
+        "nonfallback_total": 60,
+        "accuracy_excluding_fallback": 0.7166666666666667,
+        "runtime": {
+          "total_elapsed_seconds": 228.236,
+          "mean_elapsed_seconds": 1.902,
+          "timed_samples": 120,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 4,
+          "B": 21,
+          "C": 23,
+          "D": 12,
+          "unresolved": 60
+        }
+      },
+      "Business": {
+        "total": 134,
+        "correct": 53,
+        "accuracy": 0.39552238805970147,
+        "fallbacks": 75,
+        "nonfallback_total": 59,
+        "accuracy_excluding_fallback": 0.8983050847457628,
+        "runtime": {
+          "total_elapsed_seconds": 231.129,
+          "mean_elapsed_seconds": 1.725,
+          "timed_samples": 134,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 3,
+          "B": 17,
+          "C": 27,
+          "D": 10,
+          "E": 2,
+          "unresolved": 75
+        }
+      },
+      "Health and Medicine": {
+        "total": 145,
+        "correct": 27,
+        "accuracy": 0.18620689655172415,
+        "fallbacks": 105,
+        "nonfallback_total": 40,
+        "accuracy_excluding_fallback": 0.675,
+        "runtime": {
+          "total_elapsed_seconds": 274.98,
+          "mean_elapsed_seconds": 1.896,
+          "timed_samples": 145,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 4,
+          "B": 10,
+          "C": 14,
+          "D": 11,
+          "E": 1,
+          "unresolved": 105
+        }
+      },
+      "Humanities and Social Science": {
+        "total": 119,
+        "correct": 40,
+        "accuracy": 0.33613445378151263,
+        "fallbacks": 68,
+        "nonfallback_total": 51,
+        "accuracy_excluding_fallback": 0.7843137254901961,
+        "runtime": {
+          "total_elapsed_seconds": 242.109,
+          "mean_elapsed_seconds": 2.035,
+          "timed_samples": 119,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 8,
+          "B": 16,
+          "C": 15,
+          "D": 12,
+          "unresolved": 68
+        }
+      },
+      "Science": {
+        "total": 137,
+        "correct": 32,
+        "accuracy": 0.23357664233576642,
+        "fallbacks": 87,
+        "nonfallback_total": 50,
+        "accuracy_excluding_fallback": 0.64,
+        "runtime": {
+          "total_elapsed_seconds": 306.433,
+          "mean_elapsed_seconds": 2.237,
+          "timed_samples": 137,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 4,
+          "B": 16,
+          "C": 12,
+          "D": 17,
+          "E": 1,
+          "unresolved": 87
+        }
+      },
+      "Tech and Engineering": {
+        "total": 192,
+        "correct": 29,
+        "accuracy": 0.15104166666666666,
+        "fallbacks": 144,
+        "nonfallback_total": 48,
+        "accuracy_excluding_fallback": 0.6041666666666666,
+        "runtime": {
+          "total_elapsed_seconds": 441.715,
+          "mean_elapsed_seconds": 2.301,
+          "timed_samples": 192,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 3,
+          "B": 13,
+          "C": 23,
+          "D": 8,
+          "E": 1,
+          "unresolved": 144
+        }
+      }
+    }
+  },
+  "subjects": {
+    "option_permuted_01": {
+      "Accounting": {
+        "total": 30,
+        "correct": 4,
+        "accuracy": 0.13333333333333333,
+        "fallbacks": 25,
+        "nonfallback_total": 5,
+        "accuracy_excluding_fallback": 0.8,
+        "runtime": {
+          "total_elapsed_seconds": 64.14,
+          "mean_elapsed_seconds": 2.138,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 2,
+          "C": 1,
+          "D": 1,
+          "unresolved": 25
+        }
+      },
+      "Agriculture": {
+        "total": 30,
+        "correct": 9,
+        "accuracy": 0.3,
+        "fallbacks": 12,
+        "nonfallback_total": 18,
+        "accuracy_excluding_fallback": 0.5,
+        "runtime": {
+          "total_elapsed_seconds": 52.716,
+          "mean_elapsed_seconds": 1.757,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 2,
+          "B": 2,
+          "C": 6,
+          "D": 5,
+          "E": 3,
+          "unresolved": 12
+        }
+      },
+      "Architecture_and_Engineering": {
+        "total": 29,
+        "correct": 6,
+        "accuracy": 0.20689655172413793,
+        "fallbacks": 22,
+        "nonfallback_total": 7,
+        "accuracy_excluding_fallback": 0.8571428571428571,
+        "runtime": {
+          "total_elapsed_seconds": 83.795,
+          "mean_elapsed_seconds": 2.889,
+          "timed_samples": 29,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 1,
+          "C": 1,
+          "D": 4,
+          "unresolved": 22
+        }
+      },
+      "Art": {
+        "total": 30,
+        "correct": 10,
+        "accuracy": 0.3333333333333333,
+        "fallbacks": 14,
+        "nonfallback_total": 16,
+        "accuracy_excluding_fallback": 0.625,
+        "runtime": {
+          "total_elapsed_seconds": 51.655,
+          "mean_elapsed_seconds": 1.722,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 4,
+          "C": 7,
+          "D": 4,
+          "unresolved": 14
+        }
+      },
+      "Art_Theory": {
+        "total": 30,
+        "correct": 13,
+        "accuracy": 0.43333333333333335,
+        "fallbacks": 17,
+        "nonfallback_total": 13,
+        "accuracy_excluding_fallback": 1.0,
+        "runtime": {
+          "total_elapsed_seconds": 48.435,
+          "mean_elapsed_seconds": 1.615,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 3,
+          "B": 3,
+          "C": 3,
+          "D": 4,
+          "unresolved": 17
+        }
+      },
+      "Basic_Medical_Science": {
+        "total": 28,
+        "correct": 9,
+        "accuracy": 0.32142857142857145,
+        "fallbacks": 14,
+        "nonfallback_total": 14,
+        "accuracy_excluding_fallback": 0.6428571428571429,
+        "runtime": {
+          "total_elapsed_seconds": 57.071,
+          "mean_elapsed_seconds": 2.038,
+          "timed_samples": 28,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 6,
+          "C": 7,
+          "D": 1,
+          "unresolved": 14
+        }
+      },
+      "Biology": {
+        "total": 29,
+        "correct": 5,
+        "accuracy": 0.1724137931034483,
+        "fallbacks": 21,
+        "nonfallback_total": 8,
+        "accuracy_excluding_fallback": 0.625,
+        "runtime": {
+          "total_elapsed_seconds": 58.55,
+          "mean_elapsed_seconds": 2.019,
+          "timed_samples": 29,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 1,
+          "C": 4,
+          "D": 2,
+          "unresolved": 21
+        }
+      },
+      "Chemistry": {
+        "total": 23,
+        "correct": 2,
+        "accuracy": 0.08695652173913043,
+        "fallbacks": 19,
+        "nonfallback_total": 4,
+        "accuracy_excluding_fallback": 0.5,
+        "runtime": {
+          "total_elapsed_seconds": 39.86,
+          "mean_elapsed_seconds": 1.733,
+          "timed_samples": 23,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 1,
+          "C": 2,
+          "D": 1,
+          "unresolved": 19
+        }
+      },
+      "Clinical_Medicine": {
+        "total": 30,
+        "correct": 5,
+        "accuracy": 0.16666666666666666,
+        "fallbacks": 23,
+        "nonfallback_total": 7,
+        "accuracy_excluding_fallback": 0.7142857142857143,
+        "runtime": {
+          "total_elapsed_seconds": 47.538,
+          "mean_elapsed_seconds": 1.585,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 2,
+          "C": 3,
+          "D": 1,
+          "F": 1,
+          "unresolved": 23
+        }
+      },
+      "Computer_Science": {
+        "total": 27,
+        "correct": 6,
+        "accuracy": 0.2222222222222222,
+        "fallbacks": 19,
+        "nonfallback_total": 8,
+        "accuracy_excluding_fallback": 0.75,
+        "runtime": {
+          "total_elapsed_seconds": 60.912,
+          "mean_elapsed_seconds": 2.256,
+          "timed_samples": 27,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 2,
+          "B": 3,
+          "D": 2,
+          "E": 1,
+          "unresolved": 19
+        }
+      },
+      "Design": {
+        "total": 30,
+        "correct": 14,
+        "accuracy": 0.4666666666666667,
+        "fallbacks": 13,
+        "nonfallback_total": 17,
+        "accuracy_excluding_fallback": 0.8235294117647058,
+        "runtime": {
+          "total_elapsed_seconds": 31.84,
+          "mean_elapsed_seconds": 1.061,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 3,
+          "B": 6,
+          "C": 5,
+          "D": 3,
+          "unresolved": 13
+        }
+      },
+      "Diagnostics_and_Laboratory_Medicine": {
+        "total": 30,
+        "correct": 1,
+        "accuracy": 0.03333333333333333,
+        "fallbacks": 27,
+        "nonfallback_total": 3,
+        "accuracy_excluding_fallback": 0.3333333333333333,
+        "runtime": {
+          "total_elapsed_seconds": 70.126,
+          "mean_elapsed_seconds": 2.338,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 2,
+          "D": 1,
+          "unresolved": 27
+        }
+      },
+      "Economics": {
+        "total": 29,
+        "correct": 12,
+        "accuracy": 0.41379310344827586,
+        "fallbacks": 14,
+        "nonfallback_total": 15,
+        "accuracy_excluding_fallback": 0.8,
+        "runtime": {
+          "total_elapsed_seconds": 49.322,
+          "mean_elapsed_seconds": 1.701,
+          "timed_samples": 29,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 2,
+          "B": 2,
+          "C": 6,
+          "D": 5,
+          "unresolved": 14
+        }
+      },
+      "Electronics": {
+        "total": 16,
+        "correct": 1,
+        "accuracy": 0.0625,
+        "fallbacks": 15,
+        "nonfallback_total": 1,
+        "accuracy_excluding_fallback": 1.0,
+        "runtime": {
+          "total_elapsed_seconds": 35.937,
+          "mean_elapsed_seconds": 2.246,
+          "timed_samples": 16,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "D": 1,
+          "unresolved": 15
+        }
+      },
+      "Energy_and_Power": {
+        "total": 30,
+        "correct": 6,
+        "accuracy": 0.2,
+        "fallbacks": 23,
+        "nonfallback_total": 7,
+        "accuracy_excluding_fallback": 0.8571428571428571,
+        "runtime": {
+          "total_elapsed_seconds": 89.115,
+          "mean_elapsed_seconds": 2.97,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 1,
+          "C": 4,
+          "D": 2,
+          "unresolved": 23
+        }
+      },
+      "Finance": {
+        "total": 22,
+        "correct": 14,
+        "accuracy": 0.6363636363636364,
+        "fallbacks": 8,
+        "nonfallback_total": 14,
+        "accuracy_excluding_fallback": 1.0,
+        "runtime": {
+          "total_elapsed_seconds": 36.696,
+          "mean_elapsed_seconds": 1.668,
+          "timed_samples": 22,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 2,
+          "B": 7,
+          "C": 2,
+          "D": 3,
+          "unresolved": 8
+        }
+      },
+      "Geography": {
+        "total": 27,
+        "correct": 3,
+        "accuracy": 0.1111111111111111,
+        "fallbacks": 19,
+        "nonfallback_total": 8,
+        "accuracy_excluding_fallback": 0.375,
+        "runtime": {
+          "total_elapsed_seconds": 36.104,
+          "mean_elapsed_seconds": 1.337,
+          "timed_samples": 27,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 3,
+          "C": 2,
+          "D": 2,
+          "unresolved": 19
+        }
+      },
+      "History": {
+        "total": 30,
+        "correct": 6,
+        "accuracy": 0.2,
+        "fallbacks": 21,
+        "nonfallback_total": 9,
+        "accuracy_excluding_fallback": 0.6666666666666666,
+        "runtime": {
+          "total_elapsed_seconds": 34.44,
+          "mean_elapsed_seconds": 1.148,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 3,
+          "B": 2,
+          "C": 2,
+          "D": 2,
+          "unresolved": 21
+        }
+      },
+      "Literature": {
+        "total": 30,
+        "correct": 9,
+        "accuracy": 0.3,
+        "fallbacks": 20,
+        "nonfallback_total": 10,
+        "accuracy_excluding_fallback": 0.9,
+        "runtime": {
+          "total_elapsed_seconds": 51.45,
+          "mean_elapsed_seconds": 1.715,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 3,
+          "C": 5,
+          "D": 2,
+          "unresolved": 20
+        }
+      },
+      "Manage": {
+        "total": 24,
+        "correct": 4,
+        "accuracy": 0.16666666666666666,
+        "fallbacks": 20,
+        "nonfallback_total": 4,
+        "accuracy_excluding_fallback": 1.0,
+        "runtime": {
+          "total_elapsed_seconds": 43.814,
+          "mean_elapsed_seconds": 1.826,
+          "timed_samples": 24,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 2,
+          "C": 1,
+          "E": 1,
+          "unresolved": 20
+        }
+      },
+      "Marketing": {
+        "total": 29,
+        "correct": 15,
+        "accuracy": 0.5172413793103449,
+        "fallbacks": 12,
+        "nonfallback_total": 17,
+        "accuracy_excluding_fallback": 0.8823529411764706,
+        "runtime": {
+          "total_elapsed_seconds": 52.897,
+          "mean_elapsed_seconds": 1.824,
+          "timed_samples": 29,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 5,
+          "C": 10,
+          "D": 2,
+          "unresolved": 12
+        }
+      },
+      "Materials": {
+        "total": 30,
+        "correct": 3,
+        "accuracy": 0.1,
+        "fallbacks": 26,
+        "nonfallback_total": 4,
+        "accuracy_excluding_fallback": 0.75,
+        "runtime": {
+          "total_elapsed_seconds": 91.725,
+          "mean_elapsed_seconds": 3.057,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 1,
+          "C": 2,
+          "unresolved": 26
+        }
+      },
+      "Math": {
+        "total": 29,
+        "correct": 7,
+        "accuracy": 0.2413793103448276,
+        "fallbacks": 18,
+        "nonfallback_total": 11,
+        "accuracy_excluding_fallback": 0.6363636363636364,
+        "runtime": {
+          "total_elapsed_seconds": 73.692,
+          "mean_elapsed_seconds": 2.541,
+          "timed_samples": 29,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 6,
+          "C": 3,
+          "D": 1,
+          "unresolved": 18
+        }
+      },
+      "Mechanical_Engineering": {
+        "total": 30,
+        "correct": 2,
+        "accuracy": 0.06666666666666667,
+        "fallbacks": 26,
+        "nonfallback_total": 4,
+        "accuracy_excluding_fallback": 0.5,
+        "runtime": {
+          "total_elapsed_seconds": 80.73,
+          "mean_elapsed_seconds": 2.691,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "C": 3,
+          "unresolved": 26
+        }
+      },
+      "Music": {
+        "total": 30,
+        "correct": 6,
+        "accuracy": 0.2,
+        "fallbacks": 18,
+        "nonfallback_total": 12,
+        "accuracy_excluding_fallback": 0.5,
+        "runtime": {
+          "total_elapsed_seconds": 72.09,
+          "mean_elapsed_seconds": 2.403,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 3,
+          "B": 4,
+          "C": 3,
+          "D": 2,
+          "unresolved": 18
+        }
+      },
+      "Pharmacy": {
+        "total": 27,
+        "correct": 5,
+        "accuracy": 0.18518518518518517,
+        "fallbacks": 20,
+        "nonfallback_total": 7,
+        "accuracy_excluding_fallback": 0.7142857142857143,
+        "runtime": {
+          "total_elapsed_seconds": 63.531,
+          "mean_elapsed_seconds": 2.353,
+          "timed_samples": 27,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 4,
+          "C": 2,
+          "unresolved": 20
+        }
+      },
+      "Physics": {
+        "total": 29,
+        "correct": 9,
+        "accuracy": 0.3103448275862069,
+        "fallbacks": 17,
+        "nonfallback_total": 12,
+        "accuracy_excluding_fallback": 0.75,
+        "runtime": {
+          "total_elapsed_seconds": 59.739,
+          "mean_elapsed_seconds": 2.06,
+          "timed_samples": 29,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 6,
+          "C": 1,
+          "D": 5,
+          "unresolved": 17
+        }
+      },
+      "Psychology": {
+        "total": 29,
+        "correct": 5,
+        "accuracy": 0.1724137931034483,
+        "fallbacks": 24,
+        "nonfallback_total": 5,
+        "accuracy_excluding_fallback": 1.0,
+        "runtime": {
+          "total_elapsed_seconds": 64.767,
+          "mean_elapsed_seconds": 2.233,
+          "timed_samples": 29,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 1,
+          "D": 3,
+          "unresolved": 24
+        }
+      },
+      "Public_Health": {
+        "total": 30,
+        "correct": 12,
+        "accuracy": 0.4,
+        "fallbacks": 16,
+        "nonfallback_total": 14,
+        "accuracy_excluding_fallback": 0.8571428571428571,
+        "runtime": {
+          "total_elapsed_seconds": 60.089,
+          "mean_elapsed_seconds": 2.003,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 7,
+          "C": 3,
+          "D": 3,
+          "unresolved": 16
+        }
+      },
+      "Sociology": {
+        "total": 30,
+        "correct": 8,
+        "accuracy": 0.26666666666666666,
+        "fallbacks": 17,
+        "nonfallback_total": 13,
+        "accuracy_excluding_fallback": 0.6153846153846154,
+        "runtime": {
+          "total_elapsed_seconds": 58.5,
+          "mean_elapsed_seconds": 1.95,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 3,
+          "B": 3,
+          "C": 6,
+          "D": 1,
+          "unresolved": 17
+        }
+      }
+    },
+    "option_permuted_02": {
+      "Accounting": {
+        "total": 30,
+        "correct": 9,
+        "accuracy": 0.3,
+        "fallbacks": 18,
+        "nonfallback_total": 12,
+        "accuracy_excluding_fallback": 0.75,
+        "runtime": {
+          "total_elapsed_seconds": 60.66,
+          "mean_elapsed_seconds": 2.022,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 3,
+          "C": 7,
+          "D": 1,
+          "unresolved": 18
+        }
+      },
+      "Agriculture": {
+        "total": 30,
+        "correct": 10,
+        "accuracy": 0.3333333333333333,
+        "fallbacks": 10,
+        "nonfallback_total": 20,
+        "accuracy_excluding_fallback": 0.5,
+        "runtime": {
+          "total_elapsed_seconds": 53.52,
+          "mean_elapsed_seconds": 1.784,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 3,
+          "B": 6,
+          "C": 7,
+          "D": 3,
+          "E": 1,
+          "unresolved": 10
+        }
+      },
+      "Architecture_and_Engineering": {
+        "total": 29,
+        "correct": 6,
+        "accuracy": 0.20689655172413793,
+        "fallbacks": 22,
+        "nonfallback_total": 7,
+        "accuracy_excluding_fallback": 0.8571428571428571,
+        "runtime": {
+          "total_elapsed_seconds": 46.668,
+          "mean_elapsed_seconds": 1.609,
+          "timed_samples": 29,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 1,
+          "C": 3,
+          "D": 3,
+          "unresolved": 22
+        }
+      },
+      "Art": {
+        "total": 30,
+        "correct": 14,
+        "accuracy": 0.4666666666666667,
+        "fallbacks": 11,
+        "nonfallback_total": 19,
+        "accuracy_excluding_fallback": 0.7368421052631579,
+        "runtime": {
+          "total_elapsed_seconds": 55.041,
+          "mean_elapsed_seconds": 1.835,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 10,
+          "C": 7,
+          "D": 2,
+          "unresolved": 11
+        }
+      },
+      "Art_Theory": {
+        "total": 30,
+        "correct": 14,
+        "accuracy": 0.4666666666666667,
+        "fallbacks": 14,
+        "nonfallback_total": 16,
+        "accuracy_excluding_fallback": 0.875,
+        "runtime": {
+          "total_elapsed_seconds": 39.543,
+          "mean_elapsed_seconds": 1.318,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 4,
+          "C": 6,
+          "D": 5,
+          "unresolved": 14
+        }
+      },
+      "Basic_Medical_Science": {
+        "total": 28,
+        "correct": 9,
+        "accuracy": 0.32142857142857145,
+        "fallbacks": 14,
+        "nonfallback_total": 14,
+        "accuracy_excluding_fallback": 0.6428571428571429,
+        "runtime": {
+          "total_elapsed_seconds": 47.557,
+          "mean_elapsed_seconds": 1.698,
+          "timed_samples": 28,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 2,
+          "B": 4,
+          "C": 6,
+          "D": 1,
+          "E": 1,
+          "unresolved": 14
+        }
+      },
+      "Biology": {
+        "total": 29,
+        "correct": 6,
+        "accuracy": 0.20689655172413793,
+        "fallbacks": 17,
+        "nonfallback_total": 12,
+        "accuracy_excluding_fallback": 0.5,
+        "runtime": {
+          "total_elapsed_seconds": 65.179,
+          "mean_elapsed_seconds": 2.248,
+          "timed_samples": 29,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 4,
+          "C": 2,
+          "D": 4,
+          "E": 1,
+          "unresolved": 17
+        }
+      },
+      "Chemistry": {
+        "total": 23,
+        "correct": 4,
+        "accuracy": 0.17391304347826086,
+        "fallbacks": 14,
+        "nonfallback_total": 9,
+        "accuracy_excluding_fallback": 0.4444444444444444,
+        "runtime": {
+          "total_elapsed_seconds": 55.943,
+          "mean_elapsed_seconds": 2.432,
+          "timed_samples": 23,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 2,
+          "B": 2,
+          "C": 4,
+          "D": 1,
+          "unresolved": 14
+        }
+      },
+      "Clinical_Medicine": {
+        "total": 30,
+        "correct": 4,
+        "accuracy": 0.13333333333333333,
+        "fallbacks": 26,
+        "nonfallback_total": 4,
+        "accuracy_excluding_fallback": 1.0,
+        "runtime": {
+          "total_elapsed_seconds": 75.045,
+          "mean_elapsed_seconds": 2.502,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "D": 4,
+          "unresolved": 26
+        }
+      },
+      "Computer_Science": {
+        "total": 27,
+        "correct": 5,
+        "accuracy": 0.18518518518518517,
+        "fallbacks": 22,
+        "nonfallback_total": 5,
+        "accuracy_excluding_fallback": 1.0,
+        "runtime": {
+          "total_elapsed_seconds": 52.596,
+          "mean_elapsed_seconds": 1.948,
+          "timed_samples": 27,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 2,
+          "C": 2,
+          "D": 1,
+          "unresolved": 22
+        }
+      },
+      "Design": {
+        "total": 30,
+        "correct": 13,
+        "accuracy": 0.43333333333333335,
+        "fallbacks": 13,
+        "nonfallback_total": 17,
+        "accuracy_excluding_fallback": 0.7647058823529411,
+        "runtime": {
+          "total_elapsed_seconds": 29.852,
+          "mean_elapsed_seconds": 0.995,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 2,
+          "C": 9,
+          "D": 5,
+          "unresolved": 13
+        }
+      },
+      "Diagnostics_and_Laboratory_Medicine": {
+        "total": 30,
+        "correct": 0,
+        "accuracy": 0.0,
+        "fallbacks": 27,
+        "nonfallback_total": 3,
+        "accuracy_excluding_fallback": 0.0,
+        "runtime": {
+          "total_elapsed_seconds": 46.166,
+          "mean_elapsed_seconds": 1.539,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "unresolved": 27
+        }
+      },
+      "Economics": {
+        "total": 29,
+        "correct": 14,
+        "accuracy": 0.4827586206896552,
+        "fallbacks": 13,
+        "nonfallback_total": 16,
+        "accuracy_excluding_fallback": 0.875,
+        "runtime": {
+          "total_elapsed_seconds": 54.74,
+          "mean_elapsed_seconds": 1.888,
+          "timed_samples": 29,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 7,
+          "C": 8,
+          "D": 1,
+          "unresolved": 13
+        }
+      },
+      "Electronics": {
+        "total": 16,
+        "correct": 1,
+        "accuracy": 0.0625,
+        "fallbacks": 14,
+        "nonfallback_total": 2,
+        "accuracy_excluding_fallback": 0.5,
+        "runtime": {
+          "total_elapsed_seconds": 39.076,
+          "mean_elapsed_seconds": 2.442,
+          "timed_samples": 16,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 1,
+          "C": 1,
+          "unresolved": 14
+        }
+      },
+      "Energy_and_Power": {
+        "total": 30,
+        "correct": 4,
+        "accuracy": 0.13333333333333333,
+        "fallbacks": 24,
+        "nonfallback_total": 6,
+        "accuracy_excluding_fallback": 0.6666666666666666,
+        "runtime": {
+          "total_elapsed_seconds": 86.095,
+          "mean_elapsed_seconds": 2.87,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 2,
+          "C": 4,
+          "unresolved": 24
+        }
+      },
+      "Finance": {
+        "total": 22,
+        "correct": 12,
+        "accuracy": 0.5454545454545454,
+        "fallbacks": 10,
+        "nonfallback_total": 12,
+        "accuracy_excluding_fallback": 1.0,
+        "runtime": {
+          "total_elapsed_seconds": 41.118,
+          "mean_elapsed_seconds": 1.869,
+          "timed_samples": 22,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 4,
+          "C": 2,
+          "D": 5,
+          "unresolved": 10
+        }
+      },
+      "Geography": {
+        "total": 27,
+        "correct": 6,
+        "accuracy": 0.2222222222222222,
+        "fallbacks": 18,
+        "nonfallback_total": 9,
+        "accuracy_excluding_fallback": 0.6666666666666666,
+        "runtime": {
+          "total_elapsed_seconds": 61.353,
+          "mean_elapsed_seconds": 2.272,
+          "timed_samples": 27,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 4,
+          "C": 2,
+          "D": 3,
+          "unresolved": 18
+        }
+      },
+      "History": {
+        "total": 30,
+        "correct": 10,
+        "accuracy": 0.3333333333333333,
+        "fallbacks": 14,
+        "nonfallback_total": 16,
+        "accuracy_excluding_fallback": 0.625,
+        "runtime": {
+          "total_elapsed_seconds": 52.78,
+          "mean_elapsed_seconds": 1.759,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 4,
+          "B": 2,
+          "C": 6,
+          "D": 4,
+          "unresolved": 14
+        }
+      },
+      "Literature": {
+        "total": 30,
+        "correct": 12,
+        "accuracy": 0.4,
+        "fallbacks": 18,
+        "nonfallback_total": 12,
+        "accuracy_excluding_fallback": 1.0,
+        "runtime": {
+          "total_elapsed_seconds": 45.726,
+          "mean_elapsed_seconds": 1.524,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 6,
+          "C": 3,
+          "D": 3,
+          "unresolved": 18
+        }
+      },
+      "Manage": {
+        "total": 24,
+        "correct": 5,
+        "accuracy": 0.20833333333333334,
+        "fallbacks": 18,
+        "nonfallback_total": 6,
+        "accuracy_excluding_fallback": 0.8333333333333334,
+        "runtime": {
+          "total_elapsed_seconds": 32.986,
+          "mean_elapsed_seconds": 1.374,
+          "timed_samples": 24,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 2,
+          "C": 1,
+          "E": 2,
+          "unresolved": 18
+        }
+      },
+      "Marketing": {
+        "total": 29,
+        "correct": 13,
+        "accuracy": 0.4482758620689655,
+        "fallbacks": 16,
+        "nonfallback_total": 13,
+        "accuracy_excluding_fallback": 1.0,
+        "runtime": {
+          "total_elapsed_seconds": 41.625,
+          "mean_elapsed_seconds": 1.435,
+          "timed_samples": 29,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 1,
+          "C": 9,
+          "D": 3,
+          "unresolved": 16
+        }
+      },
+      "Materials": {
+        "total": 30,
+        "correct": 2,
+        "accuracy": 0.06666666666666667,
+        "fallbacks": 27,
+        "nonfallback_total": 3,
+        "accuracy_excluding_fallback": 0.6666666666666666,
+        "runtime": {
+          "total_elapsed_seconds": 74.57,
+          "mean_elapsed_seconds": 2.486,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "C": 2,
+          "D": 1,
+          "unresolved": 27
+        }
+      },
+      "Math": {
+        "total": 29,
+        "correct": 8,
+        "accuracy": 0.27586206896551724,
+        "fallbacks": 18,
+        "nonfallback_total": 11,
+        "accuracy_excluding_fallback": 0.7272727272727273,
+        "runtime": {
+          "total_elapsed_seconds": 73.419,
+          "mean_elapsed_seconds": 2.532,
+          "timed_samples": 29,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 4,
+          "C": 4,
+          "D": 2,
+          "unresolved": 18
+        }
+      },
+      "Mechanical_Engineering": {
+        "total": 30,
+        "correct": 1,
+        "accuracy": 0.03333333333333333,
+        "fallbacks": 25,
+        "nonfallback_total": 5,
+        "accuracy_excluding_fallback": 0.2,
+        "runtime": {
+          "total_elapsed_seconds": 89.19,
+          "mean_elapsed_seconds": 2.973,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 1,
+          "C": 4,
+          "unresolved": 25
+        }
+      },
+      "Music": {
+        "total": 30,
+        "correct": 2,
+        "accuracy": 0.06666666666666667,
+        "fallbacks": 22,
+        "nonfallback_total": 8,
+        "accuracy_excluding_fallback": 0.25,
+        "runtime": {
+          "total_elapsed_seconds": 103.8,
+          "mean_elapsed_seconds": 3.46,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 2,
+          "B": 5,
+          "C": 1,
+          "unresolved": 22
+        }
+      },
+      "Pharmacy": {
+        "total": 27,
+        "correct": 3,
+        "accuracy": 0.1111111111111111,
+        "fallbacks": 22,
+        "nonfallback_total": 5,
+        "accuracy_excluding_fallback": 0.6,
+        "runtime": {
+          "total_elapsed_seconds": 48.895,
+          "mean_elapsed_seconds": 1.811,
+          "timed_samples": 27,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 2,
+          "C": 1,
+          "D": 1,
+          "unresolved": 22
+        }
+      },
+      "Physics": {
+        "total": 29,
+        "correct": 8,
+        "accuracy": 0.27586206896551724,
+        "fallbacks": 20,
+        "nonfallback_total": 9,
+        "accuracy_excluding_fallback": 0.8888888888888888,
+        "runtime": {
+          "total_elapsed_seconds": 50.539,
+          "mean_elapsed_seconds": 1.743,
+          "timed_samples": 29,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "B": 2,
+          "D": 7,
+          "unresolved": 20
+        }
+      },
+      "Psychology": {
+        "total": 29,
+        "correct": 8,
+        "accuracy": 0.27586206896551724,
+        "fallbacks": 20,
+        "nonfallback_total": 9,
+        "accuracy_excluding_fallback": 0.8888888888888888,
+        "runtime": {
+          "total_elapsed_seconds": 57.473,
+          "mean_elapsed_seconds": 1.982,
+          "timed_samples": 29,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 3,
+          "B": 3,
+          "C": 1,
+          "D": 2,
+          "unresolved": 20
+        }
+      },
+      "Public_Health": {
+        "total": 30,
+        "correct": 11,
+        "accuracy": 0.36666666666666664,
+        "fallbacks": 16,
+        "nonfallback_total": 14,
+        "accuracy_excluding_fallback": 0.7857142857142857,
+        "runtime": {
+          "total_elapsed_seconds": 57.317,
+          "mean_elapsed_seconds": 1.911,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 3,
+          "C": 6,
+          "D": 4,
+          "unresolved": 16
+        }
+      },
+      "Sociology": {
+        "total": 30,
+        "correct": 10,
+        "accuracy": 0.3333333333333333,
+        "fallbacks": 16,
+        "nonfallback_total": 14,
+        "accuracy_excluding_fallback": 0.7142857142857143,
+        "runtime": {
+          "total_elapsed_seconds": 86.13,
+          "mean_elapsed_seconds": 2.871,
+          "timed_samples": 30,
+          "untimed_legacy_samples": 0
+        },
+        "displayed_prediction_counts": {
+          "A": 1,
+          "B": 5,
+          "C": 5,
+          "D": 3,
+          "unresolved": 16
+        }
+      }
+    }
+  },
+  "mean_permuted_accuracy": 0.25678866587957494,
+  "benchmark": "MMMU validation option-order permutation",
+  "model": "qwen3-vl-4b-instruct",
+  "status": "completed",
+  "generated_this_session": 1694,
+  "session_elapsed_seconds": 3542.214
+}

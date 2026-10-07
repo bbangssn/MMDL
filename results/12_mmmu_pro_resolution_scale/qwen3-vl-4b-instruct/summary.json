@@ -1,0 +1,53 @@
+{
+  "sample_count": 120,
+  "conditions": {
+    "direct": {
+      "total": 120,
+      "correct": 58,
+      "accuracy": 0.48333333333333334,
+      "fallbacks": 6,
+      "delta_vs_direct": 0.0,
+      "canonical_agreement_with_direct": 1.0,
+      "runtime": {
+        "total_elapsed_seconds": 47.86,
+        "mean_elapsed_seconds": 0.399,
+        "timed_samples": 120,
+        "untimed_legacy_samples": 0
+      }
+    },
+    "low_resolution": {
+      "total": 120,
+      "correct": 56,
+      "accuracy": 0.4666666666666667,
+      "fallbacks": 7,
+      "delta_vs_direct": -0.016666666666666663,
+      "canonical_agreement_with_direct": 0.6333333333333333,
+      "runtime": {
+        "total_elapsed_seconds": 35.86,
+        "mean_elapsed_seconds": 0.299,
+        "timed_samples": 120,
+        "untimed_legacy_samples": 0
+      }
+    },
+    "high_resolution": {
+      "total": 120,
+      "correct": 55,
+      "accuracy": 0.4583333333333333,
+      "fallbacks": 8,
+      "delta_vs_direct": -0.025000000000000022,
+      "canonical_agreement_with_direct": 0.7416666666666667,
+      "runtime": {
+        "total_elapsed_seconds": 49.16,
+        "mean_elapsed_seconds": 0.41,
+        "timed_samples": 120,
+        "untimed_legacy_samples": 0
+      }
+    }
+  },
+  "three_seed_prediction_stability": null,
+  "benchmark": "MMMU-Pro scaled paired resolution probe",
+  "model": "qwen3-vl-4b-instruct",
+  "status": "completed",
+  "generated_this_session": 360,
+  "session_elapsed_seconds": 228.364
+}

@@ -32,6 +32,8 @@ from utils import (
     parse_options,
     qwen_rule_extract,
     resolve_model,
+    strict_judge_extract,
+    strict_judge_prompt,
     write_json,
 )
 
@@ -44,14 +46,14 @@ SOURCE_MODEL = 0  # Index in utils.MODELS
 SOURCE_RUN_TAG = "official-penalty-1p5"
 JUDGE_MODEL_NAME = "llama-3.1-8b-instruct"
 JUDGE_MODEL_ID = "meta-llama/Llama-3.1-8B-Instruct"
-JUDGE_RUN_TAG = "greedy-random-fallback"
+JUDGE_RUN_TAG = "strict-output-v1-random-fallback"
 RANDOM_SEED = 42
-REUSE_LEGACY_JUDGE_OUTPUTS = True
+REUSE_LEGACY_JUDGE_OUTPUTS = False
 LIMIT = None  # Number of fallback samples to judge; None judges all of them
 LOG_EVERY = 10
-MAX_NEW_TOKENS = 4096
+MAX_NEW_TOKENS = 8
 MAX_MODEL_LENGTH = 9048
-PROMPT_VERSION = "qwen3-vl-official-build_prompt"
+PROMPT_VERSION = "llama-strict-output-v1"
 
 
 def build_judge_prompt(
@@ -60,36 +62,13 @@ def build_judge_prompt(
     source_response: str,
     open_question_reformatted: bool,
 ) -> str:
-    """Qwen3-VL official MMMU eval_utils.build_prompt, reproduced verbatim."""
+    """Build the strict one-label prompt validated in Experiment 11."""
     del open_question_reformatted  # The official prompt handles every item identically.
-    option_text = "There are several options: \n"
-    for index, option in enumerate(options):
-        option_text += f"{chr(65 + index)}. {option}\n"
-    template = (
-        "You are an AI assistant who will help me to match "
-        "an answer with several options of a single-choice question. "
-        "You are provided with a question, several options, and an answer, "
-        "and you need to find which option is most similar to the answer. "
-        "If the meaning of all options are significantly different from the answer, output Z. "
-        "Your should output a single uppercase character in A, B, C, D (if they are valid options), and Z. \n"
-        "Example 1: \n"
-        "Question: What is the main object in image?\nOptions: A. teddy bear B. rabbit C. cat D. dog\n"
-        "Answer: a cute teddy bear\nYour output: A\n"
-        "Example 2: \n"
-        "Question: What is the main object in image?\nOptions: A. teddy bear B. rabbit C. cat D. dog\n"
-        "Answer: Spider\nYour output: Z\n"
-        "Example 3: \n"
-        "Question: {}?\nOptions: {}\nAnswer: {}\nYour output: "
-    )
-    return template.format(question, option_text, source_response)
+    return strict_judge_prompt(question, options, source_response)
 
 
 def parse_judge_answer(response: str, options: list[str]) -> str:
-    """Apply the official rule/text inference logic to the judge response."""
-    stripped = response.strip().upper()
-    if stripped == "Z":
-        return ""
-    return qwen_rule_extract(response, options)
+    return strict_judge_extract(response, options)[0]
 
 
 def main() -> None:
@@ -141,7 +120,7 @@ def main() -> None:
         "judge_backend": "transformers",
         "judge_scope": "rule-parser fallbacks only",
         "prompt_version": PROMPT_VERSION,
-        "official_prompt": True,
+        "official_prompt": False,
         "official_default_judge": "gpt-3.5-turbo-0125",
         "do_sample": False,
         "judge_retry_count": 1,
@@ -333,7 +312,7 @@ def main() -> None:
         "final_accuracy": final_correct / len(source_rows),
         "accuracy_delta": (final_correct - baseline_correct) / len(source_rows),
         "judge_protocol": {
-            "official_prompt": True,
+            "official_prompt": False,
             "official_judge_model": False,
             "official_default_judge": "gpt-3.5-turbo-0125",
             "local_judge_substitution": JUDGE_MODEL_ID,
@@ -344,6 +323,7 @@ def main() -> None:
             "random_seed": RANDOM_SEED,
             "known_differences": [
                 "Llama 3.1 8B replaces the official default GPT-3.5 judge.",
+                "A strict one-label prompt replaces the official judge prompt.",
                 "Deterministic local inference is called once instead of up to 25 times.",
             ],
             "do_sample": False,

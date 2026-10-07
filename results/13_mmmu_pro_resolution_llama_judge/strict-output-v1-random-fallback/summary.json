@@ -1,0 +1,160 @@
+{
+  "status": "completed",
+  "source_samples": 360,
+  "fallback_samples": 21,
+  "judge_resolved": 21,
+  "random_fallbacks": 0,
+  "conditions": {
+    "direct": {
+      "total": 120,
+      "correct": 59,
+      "accuracy": 0.49166666666666664,
+      "delta_vs_direct": 0.0,
+      "paired_bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "direct_wrong_to_condition_correct": 0,
+      "direct_correct_to_condition_wrong": 0,
+      "agreement_with_direct": 1.0,
+      "random_fallbacks": 0,
+      "categories": {
+        "Art and Design": {
+          "total": 20,
+          "correct": 11,
+          "accuracy": 0.55
+        },
+        "Business": {
+          "total": 20,
+          "correct": 9,
+          "accuracy": 0.45
+        },
+        "Health and Medicine": {
+          "total": 20,
+          "correct": 8,
+          "accuracy": 0.4
+        },
+        "Humanities and Social Science": {
+          "total": 20,
+          "correct": 15,
+          "accuracy": 0.75
+        },
+        "Science": {
+          "total": 20,
+          "correct": 10,
+          "accuracy": 0.5
+        },
+        "Tech and Engineering": {
+          "total": 20,
+          "correct": 6,
+          "accuracy": 0.3
+        }
+      }
+    },
+    "low_resolution": {
+      "total": 120,
+      "correct": 57,
+      "accuracy": 0.475,
+      "delta_vs_direct": -0.016666666666666666,
+      "paired_bootstrap_95_ci": [
+        -0.09166666666666666,
+        0.058333333333333334
+      ],
+      "direct_wrong_to_condition_correct": 9,
+      "direct_correct_to_condition_wrong": 11,
+      "agreement_with_direct": 0.65,
+      "random_fallbacks": 0,
+      "categories": {
+        "Art and Design": {
+          "total": 20,
+          "correct": 10,
+          "accuracy": 0.5
+        },
+        "Business": {
+          "total": 20,
+          "correct": 10,
+          "accuracy": 0.5
+        },
+        "Health and Medicine": {
+          "total": 20,
+          "correct": 7,
+          "accuracy": 0.35
+        },
+        "Humanities and Social Science": {
+          "total": 20,
+          "correct": 16,
+          "accuracy": 0.8
+        },
+        "Science": {
+          "total": 20,
+          "correct": 10,
+          "accuracy": 0.5
+        },
+        "Tech and Engineering": {
+          "total": 20,
+          "correct": 4,
+          "accuracy": 0.2
+        }
+      }
+    },
+    "high_resolution": {
+      "total": 120,
+      "correct": 53,
+      "accuracy": 0.44166666666666665,
+      "delta_vs_direct": -0.05,
+      "paired_bootstrap_95_ci": [
+        -0.10833333333333334,
+        0.008333333333333333
+      ],
+      "direct_wrong_to_condition_correct": 4,
+      "direct_correct_to_condition_wrong": 10,
+      "agreement_with_direct": 0.7666666666666667,
+      "random_fallbacks": 0,
+      "categories": {
+        "Art and Design": {
+          "total": 20,
+          "correct": 10,
+          "accuracy": 0.5
+        },
+        "Business": {
+          "total": 20,
+          "correct": 9,
+          "accuracy": 0.45
+        },
+        "Health and Medicine": {
+          "total": 20,
+          "correct": 6,
+          "accuracy": 0.3
+        },
+        "Humanities and Social Science": {
+          "total": 20,
+          "correct": 15,
+          "accuracy": 0.75
+        },
+        "Science": {
+          "total": 20,
+          "correct": 9,
+          "accuracy": 0.45
+        },
+        "Tech and Engineering": {
+          "total": 20,
+          "correct": 4,
+          "accuracy": 0.2
+        }
+      }
+    }
+  },
+  "low_vs_high": {
+    "left": "low_resolution",
+    "right": "high_resolution",
+    "n": 120,
+    "right_minus_left_accuracy": -0.03333333333333333,
+    "paired_bootstrap_95_ci": [
+      -0.1,
+      0.03333333333333333
+    ],
+    "left_wrong_to_right_correct": 7,
+    "left_correct_to_right_wrong": 11
+  },
+  "session_elapsed_seconds": 12.029
+}

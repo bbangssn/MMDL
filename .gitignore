@@ -43,5 +43,6 @@ dist/
 .env
 .env.*
 !.env.example
+openai_key.json
 .DS_Store
 Thumbs.db

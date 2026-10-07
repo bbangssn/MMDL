@@ -31,7 +31,10 @@ DATASET_CONFIG = "standard (10 options)"
 
 # EDIT THESE SETTINGS
 MODEL = 0
+EXPERIMENT_DIR = "04_bottleneck_probes"
+BENCHMARK_NAME = "MMMU-Pro small bottleneck probes"
 SAMPLES_PER_CATEGORY = 4
+REQUIRE_EXPLANATION = True
 CONDITIONS = (
     "direct", "brief_cot", "structured_reasoning", "grounded_answer",
     "low_resolution", "high_resolution", "option_permuted",
@@ -84,7 +87,7 @@ def select_samples(samples: list[dict]) -> list[dict]:
         prompt = prompt_for(sample)
         count = len(images_for(sample, prompt))
         # One-image items isolate resolution without exceeding the 9,048-token cap.
-        if valid_explanation(sample) and count == 1:
+        if (not REQUIRE_EXPLANATION or valid_explanation(sample)) and count == 1:
             groups[category_for_subject(str(sample["subject"]))].append(sample)
     selected = []
     for category in sorted(groups):
@@ -212,13 +215,14 @@ def summarize(rows: list[dict], sample_count: int) -> dict:
 def main() -> None:
     session_started = time.perf_counter()
     spec = resolve_model(str(MODEL))
-    output_dir = RESULTS_ROOT / "04_bottleneck_probes" / spec.name
+    output_dir = RESULTS_ROOT / EXPERIMENT_DIR / spec.name
     predictions_path = output_dir / "predictions.jsonl"
     config = {
-        "benchmark": "MMMU-Pro small bottleneck probes",
+        "benchmark": BENCHMARK_NAME,
         "dataset": DATA_PATH, "dataset_config": DATASET_CONFIG, "split": "test",
         "model": spec.name, "model_path": spec.path,
         "samples_per_category": SAMPLES_PER_CATEGORY,
+        "require_explanation": REQUIRE_EXPLANATION,
         "conditions": list(CONDITIONS), "max_new_tokens": MAX_NEW_TOKENS,
         "max_model_length": MAX_MODEL_LENGTH, "seed": SEED,
         "visible_gpu": VISIBLE_GPU, "backend": "vllm",
@@ -239,7 +243,10 @@ def main() -> None:
     selected = select_samples(samples)
     donors = donor_map(selected, samples)
     manifest = {
-        "selection": "4 explanation-bearing one-image items per category",
+        "selection": (
+            f"{SAMPLES_PER_CATEGORY} one-image items per category; "
+            f"require_explanation={REQUIRE_EXPLANATION}"
+        ),
         "samples": [{
             "id": str(x["id"]), "category": category_for_subject(str(x["subject"])),
             "subject": str(x["subject"]), "donor_id": donors[str(x["id"])],
@@ -449,7 +456,7 @@ def main() -> None:
     bar.close()
     summary = summarize(rows, len(selected))
     summary.update({
-        "benchmark": "MMMU-Pro small bottleneck probes", "model": spec.name,
+        "benchmark": BENCHMARK_NAME, "model": spec.name,
         "status": "completed" if len(rows) == total_target else "partial",
         "generated_this_session": generated,
         "session_elapsed_seconds": round(time.perf_counter()-session_started, 3),

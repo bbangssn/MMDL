@@ -1,0 +1,24 @@
+{
+  "benchmark": "MMMU validation modality ablation local judge",
+  "source_experiment": "07_mmmu_modality_ablation",
+  "source_predictions": "07_mmmu_modality_ablation/official-penalty-1p5/qwen3-vl-4b-instruct/predictions.jsonl",
+  "source_model": "qwen3-vl-4b-instruct",
+  "source_run_tag": "official-penalty-1p5",
+  "conditions": [
+    "full",
+    "text_only",
+    "shuffled_image",
+    "blank_image"
+  ],
+  "judge_model": "meta-llama/Llama-3.1-8B-Instruct",
+  "judge_backend": "transformers",
+  "judge_run_tag": "strict-output-v1-random-fallback",
+  "prompt_version": "llama-strict-output-v1",
+  "judge_retry_count": 1,
+  "random_fallback": true,
+  "random_seed": 42,
+  "reuse_baseline_judge_outputs": false,
+  "max_new_tokens": 8,
+  "max_model_length": 9048,
+  "visible_gpu": "0"
+}

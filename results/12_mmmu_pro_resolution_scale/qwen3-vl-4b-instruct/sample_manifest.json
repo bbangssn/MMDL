@@ -1,0 +1,725 @@
+{
+  "selection": "20 one-image items per category; require_explanation=False",
+  "samples": [
+    {
+      "id": "validation_Art_5",
+      "category": "Art and Design",
+      "subject": "Art",
+      "donor_id": "validation_Chemistry_28"
+    },
+    {
+      "id": "test_Art_8",
+      "category": "Art and Design",
+      "subject": "Art",
+      "donor_id": "test_Chemistry_400"
+    },
+    {
+      "id": "test_Art_84",
+      "category": "Art and Design",
+      "subject": "Art",
+      "donor_id": "test_Materials_277"
+    },
+    {
+      "id": "test_Design_143",
+      "category": "Art and Design",
+      "subject": "Design",
+      "donor_id": "test_Mechanical_Engineering_205"
+    },
+    {
+      "id": "test_Design_148",
+      "category": "Art and Design",
+      "subject": "Design",
+      "donor_id": "test_Marketing_69"
+    },
+    {
+      "id": "validation_Art_Theory_7",
+      "category": "Art and Design",
+      "subject": "Art_Theory",
+      "donor_id": "validation_Electronics_8"
+    },
+    {
+      "id": "validation_Design_11",
+      "category": "Art and Design",
+      "subject": "Design",
+      "donor_id": "validation_Design_14"
+    },
+    {
+      "id": "test_Art_Theory_246",
+      "category": "Art and Design",
+      "subject": "Art_Theory",
+      "donor_id": "test_Mechanical_Engineering_104"
+    },
+    {
+      "id": "test_Music_42",
+      "category": "Art and Design",
+      "subject": "Music",
+      "donor_id": "test_Music_222"
+    },
+    {
+      "id": "test_Music_70",
+      "category": "Art and Design",
+      "subject": "Music",
+      "donor_id": "validation_Public_Health_2"
+    },
+    {
+      "id": "validation_Art_30",
+      "category": "Art and Design",
+      "subject": "Art",
+      "donor_id": "test_Finance_57"
+    },
+    {
+      "id": "test_Design_25",
+      "category": "Art and Design",
+      "subject": "Design",
+      "donor_id": "test_Art_184"
+    },
+    {
+      "id": "validation_Music_18",
+      "category": "Art and Design",
+      "subject": "Music",
+      "donor_id": "test_Diagnostics_and_Laboratory_Medicine_5"
+    },
+    {
+      "id": "test_Design_119",
+      "category": "Art and Design",
+      "subject": "Design",
+      "donor_id": "test_Physics_201"
+    },
+    {
+      "id": "test_Art_130",
+      "category": "Art and Design",
+      "subject": "Art",
+      "donor_id": "test_Economics_16"
+    },
+    {
+      "id": "test_Design_33",
+      "category": "Art and Design",
+      "subject": "Design",
+      "donor_id": "test_Chemistry_471"
+    },
+    {
+      "id": "test_Music_289",
+      "category": "Art and Design",
+      "subject": "Music",
+      "donor_id": "validation_Design_15"
+    },
+    {
+      "id": "validation_Design_2",
+      "category": "Art and Design",
+      "subject": "Design",
+      "donor_id": "test_Design_25"
+    },
+    {
+      "id": "test_Design_87",
+      "category": "Art and Design",
+      "subject": "Design",
+      "donor_id": "validation_Mechanical_Engineering_3"
+    },
+    {
+      "id": "validation_Art_25",
+      "category": "Art and Design",
+      "subject": "Art",
+      "donor_id": "validation_Physics_14"
+    },
+    {
+      "id": "validation_Marketing_12",
+      "category": "Business",
+      "subject": "Marketing",
+      "donor_id": "validation_Art_Theory_17"
+    },
+    {
+      "id": "validation_Finance_26",
+      "category": "Business",
+      "subject": "Finance",
+      "donor_id": "test_Biology_334"
+    },
+    {
+      "id": "validation_Marketing_1",
+      "category": "Business",
+      "subject": "Marketing",
+      "donor_id": "validation_Pharmacy_1"
+    },
+    {
+      "id": "validation_Economics_8",
+      "category": "Business",
+      "subject": "Economics",
+      "donor_id": "validation_Basic_Medical_Science_18"
+    },
+    {
+      "id": "test_Finance_298",
+      "category": "Business",
+      "subject": "Finance",
+      "donor_id": "test_Mechanical_Engineering_205"
+    },
+    {
+      "id": "test_Finance_29",
+      "category": "Business",
+      "subject": "Finance",
+      "donor_id": "test_Manage_202"
+    },
+    {
+      "id": "test_Marketing_72",
+      "category": "Business",
+      "subject": "Marketing",
+      "donor_id": "validation_Psychology_4"
+    },
+    {
+      "id": "test_Economics_260",
+      "category": "Business",
+      "subject": "Economics",
+      "donor_id": "validation_Computer_Science_14"
+    },
+    {
+      "id": "test_Marketing_27",
+      "category": "Business",
+      "subject": "Marketing",
+      "donor_id": "validation_Agriculture_27"
+    },
+    {
+      "id": "test_Economics_210",
+      "category": "Business",
+      "subject": "Economics",
+      "donor_id": "validation_Agriculture_11"
+    },
+    {
+      "id": "test_Finance_288",
+      "category": "Business",
+      "subject": "Finance",
+      "donor_id": "validation_Materials_25"
+    },
+    {
+      "id": "test_Marketing_116",
+      "category": "Business",
+      "subject": "Marketing",
+      "donor_id": "test_Physics_307"
+    },
+    {
+      "id": "test_Marketing_76",
+      "category": "Business",
+      "subject": "Marketing",
+      "donor_id": "test_Mechanical_Engineering_87"
+    },
+    {
+      "id": "test_Economics_97",
+      "category": "Business",
+      "subject": "Economics",
+      "donor_id": "validation_Music_25"
+    },
+    {
+      "id": "test_Marketing_114",
+      "category": "Business",
+      "subject": "Marketing",
+      "donor_id": "test_Design_62"
+    },
+    {
+      "id": "validation_Economics_16",
+      "category": "Business",
+      "subject": "Economics",
+      "donor_id": "test_Public_Health_4"
+    },
+    {
+      "id": "test_Manage_202",
+      "category": "Business",
+      "subject": "Manage",
+      "donor_id": "validation_Agriculture_27"
+    },
+    {
+      "id": "test_Finance_211",
+      "category": "Business",
+      "subject": "Finance",
+      "donor_id": "validation_Biology_25"
+    },
+    {
+      "id": "test_Marketing_98",
+      "category": "Business",
+      "subject": "Marketing",
+      "donor_id": "test_Marketing_166"
+    },
+    {
+      "id": "validation_Marketing_14",
+      "category": "Business",
+      "subject": "Marketing",
+      "donor_id": "validation_Art_Theory_6"
+    },
+    {
+      "id": "test_Diagnostics_and_Laboratory_Medicine_3",
+      "category": "Health and Medicine",
+      "subject": "Diagnostics_and_Laboratory_Medicine",
+      "donor_id": "validation_Physics_5"
+    },
+    {
+      "id": "test_Pharmacy_24",
+      "category": "Health and Medicine",
+      "subject": "Pharmacy",
+      "donor_id": "test_Sociology_230"
+    },
+    {
+      "id": "validation_Public_Health_27",
+      "category": "Health and Medicine",
+      "subject": "Public_Health",
+      "donor_id": "validation_Music_18"
+    },
+    {
+      "id": "validation_Diagnostics_and_Laboratory_Medicine_19",
+      "category": "Health and Medicine",
+      "subject": "Diagnostics_and_Laboratory_Medicine",
+      "donor_id": "test_Geography_267"
+    },
+    {
+      "id": "test_Pharmacy_287",
+      "category": "Health and Medicine",
+      "subject": "Pharmacy",
+      "donor_id": "test_Chemistry_481"
+    },
+    {
+      "id": "test_Clinical_Medicine_95",
+      "category": "Health and Medicine",
+      "subject": "Clinical_Medicine",
+      "donor_id": "test_Sociology_90"
+    },
+    {
+      "id": "validation_Pharmacy_24",
+      "category": "Health and Medicine",
+      "subject": "Pharmacy",
+      "donor_id": "test_Electronics_11"
+    },
+    {
+      "id": "test_Public_Health_360",
+      "category": "Health and Medicine",
+      "subject": "Public_Health",
+      "donor_id": "test_Design_119"
+    },
+    {
+      "id": "validation_Diagnostics_and_Laboratory_Medicine_21",
+      "category": "Health and Medicine",
+      "subject": "Diagnostics_and_Laboratory_Medicine",
+      "donor_id": "validation_Clinical_Medicine_2"
+    },
+    {
+      "id": "test_Clinical_Medicine_115",
+      "category": "Health and Medicine",
+      "subject": "Clinical_Medicine",
+      "donor_id": "test_Clinical_Medicine_260"
+    },
+    {
+      "id": "validation_Clinical_Medicine_22",
+      "category": "Health and Medicine",
+      "subject": "Clinical_Medicine",
+      "donor_id": "test_Pharmacy_141"
+    },
+    {
+      "id": "validation_Public_Health_8",
+      "category": "Health and Medicine",
+      "subject": "Public_Health",
+      "donor_id": "test_Marketing_92"
+    },
+    {
+      "id": "validation_Diagnostics_and_Laboratory_Medicine_24",
+      "category": "Health and Medicine",
+      "subject": "Diagnostics_and_Laboratory_Medicine",
+      "donor_id": "test_Art_79"
+    },
+    {
+      "id": "validation_Public_Health_9",
+      "category": "Health and Medicine",
+      "subject": "Public_Health",
+      "donor_id": "test_Public_Health_295"
+    },
+    {
+      "id": "validation_Clinical_Medicine_1",
+      "category": "Health and Medicine",
+      "subject": "Clinical_Medicine",
+      "donor_id": "test_Finance_92"
+    },
+    {
+      "id": "test_Clinical_Medicine_189",
+      "category": "Health and Medicine",
+      "subject": "Clinical_Medicine",
+      "donor_id": "test_Design_135"
+    },
+    {
+      "id": "validation_Public_Health_23",
+      "category": "Health and Medicine",
+      "subject": "Public_Health",
+      "donor_id": "validation_Geography_10"
+    },
+    {
+      "id": "validation_Pharmacy_11",
+      "category": "Health and Medicine",
+      "subject": "Pharmacy",
+      "donor_id": "test_Marketing_64"
+    },
+    {
+      "id": "validation_Diagnostics_and_Laboratory_Medicine_22",
+      "category": "Health and Medicine",
+      "subject": "Diagnostics_and_Laboratory_Medicine",
+      "donor_id": "test_Design_119"
+    },
+    {
+      "id": "test_Basic_Medical_Science_219",
+      "category": "Health and Medicine",
+      "subject": "Basic_Medical_Science",
+      "donor_id": "test_Design_87"
+    },
+    {
+      "id": "validation_History_17",
+      "category": "Humanities and Social Science",
+      "subject": "History",
+      "donor_id": "test_Physics_103"
+    },
+    {
+      "id": "validation_Psychology_24",
+      "category": "Humanities and Social Science",
+      "subject": "Psychology",
+      "donor_id": "test_Biology_60"
+    },
+    {
+      "id": "test_Sociology_47",
+      "category": "Humanities and Social Science",
+      "subject": "Sociology",
+      "donor_id": "test_Marketing_150"
+    },
+    {
+      "id": "validation_History_8",
+      "category": "Humanities and Social Science",
+      "subject": "History",
+      "donor_id": "validation_Biology_15"
+    },
+    {
+      "id": "validation_Psychology_18",
+      "category": "Humanities and Social Science",
+      "subject": "Psychology",
+      "donor_id": "test_Chemistry_400"
+    },
+    {
+      "id": "test_History_46",
+      "category": "Humanities and Social Science",
+      "subject": "History",
+      "donor_id": "test_Geography_61"
+    },
+    {
+      "id": "test_Psychology_201",
+      "category": "Humanities and Social Science",
+      "subject": "Psychology",
+      "donor_id": "validation_Art_Theory_14"
+    },
+    {
+      "id": "validation_Literature_22",
+      "category": "Humanities and Social Science",
+      "subject": "Literature",
+      "donor_id": "test_Design_112"
+    },
+    {
+      "id": "test_Sociology_68",
+      "category": "Humanities and Social Science",
+      "subject": "Sociology",
+      "donor_id": "test_Pharmacy_393"
+    },
+    {
+      "id": "validation_Literature_2",
+      "category": "Humanities and Social Science",
+      "subject": "Literature",
+      "donor_id": "test_Computer_Science_369"
+    },
+    {
+      "id": "test_Psychology_106",
+      "category": "Humanities and Social Science",
+      "subject": "Psychology",
+      "donor_id": "validation_Computer_Science_17"
+    },
+    {
+      "id": "test_Literature_38",
+      "category": "Humanities and Social Science",
+      "subject": "Literature",
+      "donor_id": "test_Clinical_Medicine_73"
+    },
+    {
+      "id": "validation_History_2",
+      "category": "Humanities and Social Science",
+      "subject": "History",
+      "donor_id": "validation_Architecture_and_Engineering_13"
+    },
+    {
+      "id": "test_Sociology_145",
+      "category": "Humanities and Social Science",
+      "subject": "Sociology",
+      "donor_id": "test_Mechanical_Engineering_96"
+    },
+    {
+      "id": "test_Literature_86",
+      "category": "Humanities and Social Science",
+      "subject": "Literature",
+      "donor_id": "validation_Mechanical_Engineering_6"
+    },
+    {
+      "id": "test_Literature_69",
+      "category": "Humanities and Social Science",
+      "subject": "Literature",
+      "donor_id": "test_Pharmacy_206"
+    },
+    {
+      "id": "test_History_138",
+      "category": "Humanities and Social Science",
+      "subject": "History",
+      "donor_id": "validation_Music_18"
+    },
+    {
+      "id": "test_Literature_75",
+      "category": "Humanities and Social Science",
+      "subject": "Literature",
+      "donor_id": "test_Economics_243"
+    },
+    {
+      "id": "test_History_82",
+      "category": "Humanities and Social Science",
+      "subject": "History",
+      "donor_id": "test_Accounting_365"
+    },
+    {
+      "id": "validation_Psychology_8",
+      "category": "Humanities and Social Science",
+      "subject": "Psychology",
+      "donor_id": "test_Pharmacy_333"
+    },
+    {
+      "id": "validation_Physics_18",
+      "category": "Science",
+      "subject": "Physics",
+      "donor_id": "test_Materials_392"
+    },
+    {
+      "id": "test_Geography_19",
+      "category": "Science",
+      "subject": "Geography",
+      "donor_id": "test_Clinical_Medicine_153"
+    },
+    {
+      "id": "test_Biology_47",
+      "category": "Science",
+      "subject": "Biology",
+      "donor_id": "validation_Computer_Science_5"
+    },
+    {
+      "id": "test_Math_56",
+      "category": "Science",
+      "subject": "Math",
+      "donor_id": "test_Electronics_135"
+    },
+    {
+      "id": "test_Math_18",
+      "category": "Science",
+      "subject": "Math",
+      "donor_id": "validation_Music_6"
+    },
+    {
+      "id": "test_Math_122",
+      "category": "Science",
+      "subject": "Math",
+      "donor_id": "validation_Marketing_9"
+    },
+    {
+      "id": "validation_Math_7",
+      "category": "Science",
+      "subject": "Math",
+      "donor_id": "test_Manage_52"
+    },
+    {
+      "id": "test_Math_11",
+      "category": "Science",
+      "subject": "Math",
+      "donor_id": "validation_Clinical_Medicine_28"
+    },
+    {
+      "id": "test_Chemistry_366",
+      "category": "Science",
+      "subject": "Chemistry",
+      "donor_id": "test_Basic_Medical_Science_148"
+    },
+    {
+      "id": "test_Biology_316",
+      "category": "Science",
+      "subject": "Biology",
+      "donor_id": "test_History_26"
+    },
+    {
+      "id": "test_Biology_33",
+      "category": "Science",
+      "subject": "Biology",
+      "donor_id": "validation_Marketing_1"
+    },
+    {
+      "id": "validation_Geography_18",
+      "category": "Science",
+      "subject": "Geography",
+      "donor_id": "validation_Chemistry_16"
+    },
+    {
+      "id": "test_Biology_295",
+      "category": "Science",
+      "subject": "Biology",
+      "donor_id": "test_Literature_34"
+    },
+    {
+      "id": "test_Geography_276",
+      "category": "Science",
+      "subject": "Geography",
+      "donor_id": "test_Design_143"
+    },
+    {
+      "id": "validation_Math_14",
+      "category": "Science",
+      "subject": "Math",
+      "donor_id": "test_Mechanical_Engineering_55"
+    },
+    {
+      "id": "validation_Biology_30",
+      "category": "Science",
+      "subject": "Biology",
+      "donor_id": "test_Basic_Medical_Science_222"
+    },
+    {
+      "id": "test_Physics_61",
+      "category": "Science",
+      "subject": "Physics",
+      "donor_id": "validation_Music_28"
+    },
+    {
+      "id": "test_Math_475",
+      "category": "Science",
+      "subject": "Math",
+      "donor_id": "test_Art_Theory_156"
+    },
+    {
+      "id": "test_Geography_114",
+      "category": "Science",
+      "subject": "Geography",
+      "donor_id": "test_Public_Health_295"
+    },
+    {
+      "id": "test_Geography_61",
+      "category": "Science",
+      "subject": "Geography",
+      "donor_id": "test_Manage_202"
+    },
+    {
+      "id": "test_Agriculture_4",
+      "category": "Tech and Engineering",
+      "subject": "Agriculture",
+      "donor_id": "test_Economics_112"
+    },
+    {
+      "id": "validation_Architecture_and_Engineering_26",
+      "category": "Tech and Engineering",
+      "subject": "Architecture_and_Engineering",
+      "donor_id": "test_Psychology_153"
+    },
+    {
+      "id": "test_Materials_277",
+      "category": "Tech and Engineering",
+      "subject": "Materials",
+      "donor_id": "test_Pharmacy_34"
+    },
+    {
+      "id": "test_Agriculture_271",
+      "category": "Tech and Engineering",
+      "subject": "Agriculture",
+      "donor_id": "test_Art_Theory_39"
+    },
+    {
+      "id": "test_Materials_446",
+      "category": "Tech and Engineering",
+      "subject": "Materials",
+      "donor_id": "test_Design_53"
+    },
+    {
+      "id": "test_Electronics_38",
+      "category": "Tech and Engineering",
+      "subject": "Electronics",
+      "donor_id": "test_Art_113"
+    },
+    {
+      "id": "test_Mechanical_Engineering_209",
+      "category": "Tech and Engineering",
+      "subject": "Mechanical_Engineering",
+      "donor_id": "test_Art_Theory_420"
+    },
+    {
+      "id": "test_Agriculture_195",
+      "category": "Tech and Engineering",
+      "subject": "Agriculture",
+      "donor_id": "test_Art_Theory_246"
+    },
+    {
+      "id": "test_Architecture_and_Engineering_191",
+      "category": "Tech and Engineering",
+      "subject": "Architecture_and_Engineering",
+      "donor_id": "test_Economics_215"
+    },
+    {
+      "id": "test_Materials_230",
+      "category": "Tech and Engineering",
+      "subject": "Materials",
+      "donor_id": "validation_Finance_16"
+    },
+    {
+      "id": "test_Computer_Science_14",
+      "category": "Tech and Engineering",
+      "subject": "Computer_Science",
+      "donor_id": "test_Psychology_157"
+    },
+    {
+      "id": "test_Electronics_101",
+      "category": "Tech and Engineering",
+      "subject": "Electronics",
+      "donor_id": "validation_Mechanical_Engineering_23"
+    },
+    {
+      "id": "validation_Agriculture_1",
+      "category": "Tech and Engineering",
+      "subject": "Agriculture",
+      "donor_id": "test_Physics_243"
+    },
+    {
+      "id": "test_Computer_Science_89",
+      "category": "Tech and Engineering",
+      "subject": "Computer_Science",
+      "donor_id": "test_Materials_98"
+    },
+    {
+      "id": "test_Architecture_and_Engineering_307",
+      "category": "Tech and Engineering",
+      "subject": "Architecture_and_Engineering",
+      "donor_id": "test_Literature_69"
+    },
+    {
+      "id": "test_Agriculture_165",
+      "category": "Tech and Engineering",
+      "subject": "Agriculture",
+      "donor_id": "validation_Energy_and_Power_16"
+    },
+    {
+      "id": "test_Architecture_and_Engineering_413",
+      "category": "Tech and Engineering",
+      "subject": "Architecture_and_Engineering",
+      "donor_id": "test_Marketing_109"
+    },
+    {
+      "id": "test_Mechanical_Engineering_81",
+      "category": "Tech and Engineering",
+      "subject": "Mechanical_Engineering",
+      "donor_id": "validation_Accounting_24"
+    },
+    {
+      "id": "test_Architecture_and_Engineering_336",
+      "category": "Tech and Engineering",
+      "subject": "Architecture_and_Engineering",
+      "donor_id": "validation_Design_27"
+    },
+    {
+      "id": "test_Mechanical_Engineering_201",
+      "category": "Tech and Engineering",
+      "subject": "Mechanical_Engineering",
+      "donor_id": "test_Geography_521"
+    }
+  ]
+}

@@ -304,6 +304,59 @@ def qwen_rule_extract(answer: str, options: list[str]) -> str:
     return text_candidates[0] if len(text_candidates) == 1 else ""
 
 
+def strict_judge_prompt(question: str, options: list[str], answer: str) -> str:
+    """Llama-oriented answer-matching prompt validated in Experiment 11."""
+    option_text = "\n".join(
+        f"{chr(65 + index)}. {option}" for index, option in enumerate(options)
+    )
+    valid = ", ".join(
+        [chr(65 + index) for index in range(len(options))] + ["Z"]
+    )
+    return (
+        "You are a classification function. Match the proposed answer to the "
+        "closest option. Return Z only if none of the options match.\n\n"
+        "OUTPUT RULES:\n"
+        "- Return exactly one uppercase letter.\n"
+        "- Do not explain your reasoning.\n"
+        "- Do not repeat the question, options, or answer.\n"
+        "- Do not add punctuation, formatting, or any other words.\n"
+        f"- The only valid outputs are: {valid}\n\n"
+        f"Question: {question}\n"
+        f"Options:\n{option_text}\n"
+        f"Proposed answer: {answer}\n\n"
+        "Output:"
+    )
+
+
+def strict_judge_extract(response: str, options: list[str]) -> tuple[str, str]:
+    """Extract a valid final label from a strict local-judge response."""
+    valid = {chr(65 + index) for index in range(len(options))}
+    valid_with_z = valid | {"Z"}
+    stripped = response.strip().upper()
+    if stripped in valid_with_z:
+        return ("" if stripped == "Z" else stripped), "exact"
+
+    matches = re.findall(
+        r"(?:\bMY\s+|\bYOUR\s+)?\bOUTPUT\s*:\s*[*_`]*\(?([A-Z])\)?",
+        response.upper(),
+    )
+    if matches and matches[-1] in valid_with_z:
+        value = matches[-1]
+        return ("" if value == "Z" else value), "explicit_output"
+
+    single_lines = [
+        line.strip().strip("*_`()[]{}.: ").upper()
+        for line in response.splitlines()
+    ]
+    single_lines = [value for value in single_lines if value in valid_with_z]
+    if single_lines:
+        value = single_lines[-1]
+        return ("" if value == "Z" else value), "last_single_letter_line"
+
+    prediction = qwen_rule_extract(response, options)
+    return ("" if prediction == "Z" else prediction), "qwen_rule_extract"
+
+
 def official_mmmu_choice_extract(
     response: str,
     options: list[str],

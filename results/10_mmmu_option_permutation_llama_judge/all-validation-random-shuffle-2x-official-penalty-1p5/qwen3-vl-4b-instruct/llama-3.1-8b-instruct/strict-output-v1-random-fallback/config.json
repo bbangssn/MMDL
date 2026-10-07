@@ -1,0 +1,22 @@
+{
+  "benchmark": "MMMU validation option-order permutation local judge",
+  "source_experiment": "09_mmmu_option_permutation",
+  "source_predictions": "09_mmmu_option_permutation/all-validation-random-shuffle-2x-official-penalty-1p5/qwen3-vl-4b-instruct/predictions.jsonl",
+  "source_model": "qwen3-vl-4b-instruct",
+  "source_run_tag": "all-validation-random-shuffle-2x-official-penalty-1p5",
+  "conditions": [
+    "option_permuted_01",
+    "option_permuted_02"
+  ],
+  "judge_model": "meta-llama/Llama-3.1-8B-Instruct",
+  "judge_backend": "transformers",
+  "judge_run_tag": "strict-output-v1-random-fallback",
+  "prompt_version": "llama-strict-output-v1",
+  "judge_retry_count": 1,
+  "judge_parser": "exact, last explicit Output:X, last single-letter line, qwen rule",
+  "random_fallback": true,
+  "random_seed": 42,
+  "max_new_tokens": 8,
+  "max_model_length": 9048,
+  "visible_gpu": "0"
+}

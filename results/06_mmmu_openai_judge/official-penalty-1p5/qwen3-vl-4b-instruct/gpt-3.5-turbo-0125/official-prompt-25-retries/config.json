@@ -1,0 +1,23 @@
+{
+  "benchmark": "MMMU validation OpenAI LLM-as-a-Judge",
+  "dataset": "MMMU/MMMU",
+  "split": "validation",
+  "source_model": "qwen3-vl-4b-instruct",
+  "source_backend": "vllm",
+  "source_run_tag": "official-penalty-1p5",
+  "source_predictions": "00_mmmu_vllm/official-penalty-1p5/qwen3-vl-4b-instruct/predictions.jsonl",
+  "judge_model": "gpt-3.5-turbo-0125",
+  "judge_backend": "openai-api",
+  "judge_run_tag": "official-prompt-25-retries",
+  "judge_scope": "rule-parser fallbacks only",
+  "prompt_version": "qwen3-vl-official-build_prompt",
+  "official_prompt": true,
+  "temperature": 0,
+  "judge_retry_count": 5,
+  "api_request_attempts": 5,
+  "api_timeout_seconds": 60.0,
+  "retry_wait_seconds": 5.0,
+  "max_completion_tokens": 4096,
+  "random_fallback": true,
+  "random_seed": 42
+}
