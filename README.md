@@ -180,9 +180,8 @@ Overall/category/subject 성능
 → fine-tuning 및 재평가 계획
 ```
 
-OCR, visual understanding, chart interpretation, spatial/mathematical/multi-step reasoning, domain knowledge, answer-format failure 등은 출발점일 뿐입니다. 실제 오답을 확인하기 전에 taxonomy를 확정하지 않습니다.
+OCR, visual understanding, chart interpretation, spatial/mathematical/multi-step reasoning, domain knowledge, answer-format failure 등의 분석이 진행된 상태입니다.
 
 ## 비교 제한
 
-- MMMU judge prompt는 공식 공개 구현과 같지만 judge 모델은 공식 기본값 `gpt-3.5-turbo-0125`가 아닌 Llama 3.1 8B이므로 완전히 동일한 공식 점수는 아닙니다.
-- 정확한 공개 점수 비교에는 동일 split, prompt, image preprocessing, decoding, parser 및 judge 조건 확인이 필요합니다.
+- MMMU 평가는 공식 기본 judge인 `gpt-3.5-turbo-0125` 대신 Llama 3.1 8B와 출력 형식을 제한한 strict prompt를 사용했으므로 완전히 동일한 공식 점수는 아닙니다.
